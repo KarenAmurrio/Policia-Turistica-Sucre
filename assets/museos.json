@@ -183,5 +183,146 @@
       { "concepto": "Extranjeros", "precio": "30 Bs" },
       { "concepto": "Estudiantes", "precio": "10 Bs" }
     ]
+  },
+  {
+    "id": "museo-alfredo-gutierrez-valenzuela",
+    "nombre": "Museo Dr. Alfredo Gutiérrez Valenzuela",
+    "mapaUrl": "https://maps.google.com/?q=Plaza+25+de+mayo+N22+Sucre",
+    "descripcion": "Muestra el estilo de vida discreto y aristocrático del siglo XIX e inicios del XX con colecciones de porcelana, cristalería, esculturas y muebles antiguos.",
+    "imagen": "./assets/museos/gutierrez-valenzuela.webp",
+    "horarios": [
+      { "dias": "Lunes a Viernes", "horas": "09:00 - 12:30 / 14:30 - 18:30" },
+      { "dias": "Sábados", "horas": "09:30 - 12:00" }
+    ],
+    "costos": [
+      { "concepto": "Extranjeros", "precio": "20 Bs" },
+      { "concepto": "Nacionales", "precio": "10 Bs" },
+      { "concepto": "Niños", "precio": "2 Bs" }
+    ]
+  },
+  {
+    "id": "museo-costumbrista-mariano-deheza",
+    "nombre": "Museo Costumbrista Dr. Mariano Deheza",
+    "mapaUrl": "https://maps.google.com/?q=San+Alberto+N156+Sucre",
+    "descripcion": "Recrea ambientes coloniales y republicanos con vestuario tradicional, platería y piezas históricas del siglo XIX y XX.",
+    "imagen": "./assets/museos/mariano-deheza.webp",
+    "horarios": [
+      { "dias": "Lunes a Viernes", "horas": "09:00 - 12:30 / 14:30 - 18:30" },
+      { "dias": "Sábados", "horas": "09:30 - 12:00" }
+    ],
+    "costos": [
+      { "concepto": "Extranjeros", "precio": "20 Bs" },
+      { "concepto": "Nacionales", "precio": "10 Bs" },
+      { "concepto": "Estudiantes", "precio": "2 Bs" }
+    ]
+  },
+  {
+    "id": "museo-comunicacion-subterraneos",
+    "nombre": "Museo de la Comunicación y Subterráneos Secretos",
+    "mapaUrl": "https://maps.google.com/?q=Plazuela+Libertad+N20+Sucre",
+    "descripcion": "Un recorrido por la historia del periodismo y los medios de comunicación que incluye túneles subterráneos de piedra y momias coloniales.",
+    "imagen": "./assets/museos/comunicacion-subterraneos.webp",
+    "horarios": [
+      { "dias": "Lunes a Viernes", "horas": "09:00 - 12:30 / 14:30 - 18:30" },
+      { "dias": "Sábados", "horas": "09:20 - 12:30" }
+    ],
+    "costos": [
+      { "concepto": "Nacionales", "precio": "30 Bs" },
+      { "concepto": "Extranjeros", "precio": "70 Bs" },
+      { "concepto": "Niños (12 a 18 años)", "precio": "15 Bs" },
+      { "concepto": "Menores de 12 años", "precio": "Gratis" }
+    ]
+  },
+  {
+    "id": "castillo-de-la-glorieta",
+    "nombre": "Castillo de la Glorieta",
+    "mapaUrl": "https://maps.google.com/?q=Castillo+de+la+Glorieta+Sucre",
+    "descripcion": "Monumento arquitectónico único que combina estilos gótico, barroco y árabe, residencia histórica de los príncipes de La Glorieta.",
+    "imagen": "./assets/museos/castillo-glorieta.webp",
+    "horarios": [
+      { "dias": "Martes a Sábado", "horas": "09:00 - 17:00" },
+      { "dias": "Domingos y Feriados", "horas": "09:00 - 16:00" }
+    ],
+    "costos": [
+      { "concepto": "Nacionales", "precio": "15 Bs" },
+      { "concepto": "Extranjeros", "precio": "25 Bs" },
+      { "concepto": "Niños", "precio": "5 Bs" },
+      { "concepto": "Realidad Virtual", "precio": "10 Bs" }
+    ]
+  },
+  {
+    "id": "palacete-de-la-florida",
+    "nombre": "Palacete de La Florida",
+    "mapaUrl": "https://maps.google.com/?q=Zona+La+Florida+Sucre",
+    "descripcion": "Residencia de la época republicana del expresidente Aniceto Arce con pinturas murales originales y jardines de estilo clásico.",
+    "imagen": "./assets/museos/palacete-florida.webp",
+    "horarios": [
+      { "dias": "Martes a Sábado", "horas": "09:00 - 17:00" },
+      { "dias": "Domingos y Feriados", "horas": "09:00 - 16:00" }
+    ],
+    "costos": [
+      { "concepto": "Nacionales", "precio": "10 Bs" },
+      { "concepto": "Extranjeros", "precio": "15 Bs" },
+      { "concepto": "Niños", "precio": "5 Bs" }
+    ]
+  },
+  {
+    "id": "mirador-de-la-mansarda",
+    "nombre": "Mirador de la Mansarda",
+    "mapaUrl": "https://maps.google.com/?q=Plaza+25+de+mayo+N10+Sucre",
+    "descripcion": "Ubicado en la Gobernación de Chuquisaca, ofrece una de las mejores vistas panorámicas de la Plaza 25 de Mayo y el casco histórico.",
+    "imagen": "./assets/museos/mirador-mansarda.webp",
+    "horarios": [
+      { "dias": "Martes a Viernes", "horas": "08:00 - 12:00 / 14:30 - 18:30" },
+      { "dias": "Sábados", "horas": "09:00 - 17:00" },
+      { "dias": "Domingos y Feriados", "horas": "09:00 - 16:00" }
+    ],
+    "costos": [
+      { "concepto": "Nacionales", "precio": "10 Bs" },
+      { "concepto": "Extranjeros", "precio": "15 Bs" },
+      { "concepto": "Niños (6 a 12 años)", "precio": "5 Bs" }
+    ]
+  },
+  {
+    "id": "museo-instituto-medico-sucre",
+    "nombre": "Museo del Instituto Médico Sucre",
+    "mapaUrl": "https://maps.google.com/?q=Calle+San+Alberto+N30+Sucre",
+    "descripcion": "Exhibe maquetas didácticas de 1896, piezas anátomo-patológicas, animales disecados e instrumental histórico de la medicina.",
+    "imagen": "./assets/museos/instituto-medico.webp",
+    "horarios": [
+      { "dias": "Lunes a Viernes", "horas": "09:00 - 12:00 / 15:00 - 18:00" }
+    ],
+    "costos": [
+      { "concepto": "Nacionales y Extranjeros", "precio": "10 Bs" },
+      { "concepto": "Niños", "precio": "5 Bs" }
+    ]
+  },
+  {
+    "id": "museo-militar-de-la-nacion",
+    "nombre": "Museo Histórico Militar de la Nación",
+    "mapaUrl": "https://maps.google.com/?q=Calle+Ravelo+N1+Sucre",
+    "descripcion": "Exposición de la historia bélica de Bolivia con armamento, uniformes y documentos de los conflictos del Pacífico, Chaco y Acre.",
+    "imagen": "./assets/museos/historico-militar.webp",
+    "horarios": [
+      { "dias": "Lunes a Viernes", "horas": "08:30 - 12:00 / 14:00 - 16:30" }
+    ],
+    "costos": [
+      { "concepto": "Nacionales", "precio": "10 Bs" },
+      { "concepto": "Extranjeros", "precio": "15 Bs" },
+      { "concepto": "Niños", "precio": "5 Bs" }
+    ]
+  },
+  {
+    "id": "museo-historico-policial",
+    "nombre": "Museo Histórico Policial",
+    "mapaUrl": "https://maps.google.com/?q=Calle+Olañeta+N42+Sucre",
+    "descripcion": "Muestra la evolución de la Policía Boliviana a través de piezas, uniformes, documentos y armas desde la época prehispánica hasta la actualidad.",
+    "imagen": "./assets/museos/historico-policial.webp",
+    "horarios": [
+      { "dias": "Lunes a Viernes", "horas": "08:30 - 12:00 / 14:30 - 18:00" }
+    ],
+    "costos": [
+      { "concepto": "General", "precio": "Entrada libre (por Bicentenario)" }
+    ]
   }
 ]
