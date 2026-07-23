@@ -1,9 +1,319 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Prueba Vercel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Policía Turística - Sucre</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome para Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Estilos personalizados -->
+  <style>
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+    }
+  </style>
 </head>
-<body>
-    <h1>¡Hola Mundo! Vercel está funcionando correctamente.</h1>
+<body class="bg-gray-100 font-sans text-gray-800 antialiased min-h-screen flex flex-col">
+
+  <!-- NAVEGACIÓN -->
+  <nav class="bg-emerald-800 text-white shadow-md sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <i class="fa-solid fa-shield-halved text-2xl text-yellow-400"></i>
+        <span class="font-bold text-xl tracking-wide">Policía Turística</span>
+      </div>
+      <div class="hidden md:flex space-x-6 text-sm font-semibold">
+        <a href="#guias" class="hover:text-yellow-400 transition">Guías de Emergencia</a>
+        <a href="#museos" class="hover:text-yellow-400 transition">Museos y Atractivos</a>
+        <a href="#contacto" class="hover:text-yellow-400 transition">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="bg-emerald-700 text-white py-12 px-4 text-center relative overflow-hidden">
+    <div class="max-w-3xl mx-auto relative z-10">
+      <h1 class="text-3xl md:text-5xl font-extrabold mb-4">Tu seguridad en Sucre es nuestra prioridad</h1>
+      <p class="text-emerald-100 text-base md:text-lg mb-6">Información turística, guías de prevención y asistencia rápida para visitantes.</p>
+      <a href="tel:110" class="inline-flex items-center bg-yellow-400 text-emerald-950 px-6 py-3 rounded-full font-bold shadow-lg hover:bg-yellow-300 transition text-lg">
+        <i class="fa-solid fa-phone-volume mr-2"></i> Llamar a Emergencias (110)
+      </a>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full space-y-12">
+
+    <!-- SECCIÓN GUÍAS DE EMERGENCIA -->
+    <section id="guias">
+      <div class="mb-6 border-b pb-2">
+        <h2 class="text-2xl font-bold text-emerald-900 flex items-center">
+          <i class="fa-solid fa-book-medical mr-3 text-emerald-600"></i> Guías de Emergencia y Prevención
+        </h2>
+        <p class="text-gray-600 text-sm">Selecciona una guía para consultar los pasos a seguir.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Tarjeta 1: Robo o Pérdida -->
+        <div onclick="openModal('modal-robo')" class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition cursor-pointer flex flex-col justify-between group hover:border-emerald-500">
+          <div>
+            <div class="w-12 h-12 bg-red-100 text-red-600 rounded-lg flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-hand-holding-hand"></i>
+            </div>
+            <h3 class="font-bold text-lg text-gray-900 mb-2">Pérdida o Robo de Pertenencias</h3>
+            <p class="text-gray-600 text-sm">Pasos para reportar equipaje, documentos o dispositivos robados.</p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-gray-100 flex items-center text-emerald-700 font-semibold text-sm">
+            <span>Ver guía completa</span>
+            <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: Asistencia Médica -->
+        <div onclick="openModal('modal-salud')" class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition cursor-pointer flex flex-col justify-between group hover:border-emerald-500">
+          <div>
+            <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-kit-medical"></i>
+            </div>
+            <h3 class="font-bold text-lg text-gray-900 mb-2">Emergencia Médica o Mal de Altura</h3>
+            <p class="text-gray-600 text-sm">Recomendaciones de salud, soroche y centros de atención.</p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-gray-100 flex items-center text-emerald-700 font-semibold text-sm">
+            <span>Ver guía completa</span>
+            <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3: Extravío de Documentos -->
+        <div onclick="openModal('modal-docs')" class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition cursor-pointer flex flex-col justify-between group hover:border-emerald-500">
+          <div>
+            <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-id-card"></i>
+            </div>
+            <h3 class="font-bold text-lg text-gray-900 mb-2">Pérdida de Pasaporte / CI</h3>
+            <p class="text-gray-600 text-sm">Trámites con consulados y policía migratoria.</p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-gray-100 flex items-center text-emerald-700 font-semibold text-sm">
+            <span>Ver guía completa</span>
+            <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN MUSEOS Y ATRACTIVOS -->
+    <section id="museos">
+      <div class="mb-6 border-b pb-2">
+        <h2 class="text-2xl font-bold text-emerald-900 flex items-center">
+          <i class="fa-solid fa-landmark mr-3 text-emerald-600"></i> Museos y Atractivos Seguros
+        </h2>
+        <p class="text-gray-600 text-sm">Información y ubicaciones de interés turístico.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Tarjeta Museo 1 -->
+        <div onclick="openModal('modal-casa-libertad')" class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition cursor-pointer group hover:border-emerald-500 flex flex-col">
+          <div class="h-48 bg-gray-200 overflow-hidden relative">
+            <!-- Nota: Imagen apuntando a la carpeta assets/ -->
+            <img src="assets/images/casa-libertad.jpg" onerror="this.src='https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=600&q=80'" alt="Casa de la Libertad" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <span class="absolute top-3 right-3 bg-emerald-800 text-white text-xs px-2 py-1 rounded font-semibold shadow">Histórico</span>
+          </div>
+          <div class="p-5 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-bold text-lg text-gray-900 group-hover:text-emerald-700 transition">Casa de la Libertad</h3>
+              <p class="text-gray-600 text-sm mt-1 line-clamp-2">Lugar donde se firmó el Acta de Independencia de Bolivia.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 font-medium">
+              <span><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Plaza 25 de Mayo</span>
+              <span class="text-emerald-700 font-bold flex items-center">Ver detalles <i class="fa-solid fa-chevron-right ml-1"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta Museo 2 -->
+        <div onclick="openModal('modal-la-recoleta')" class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition cursor-pointer group hover:border-emerald-500 flex flex-col">
+          <div class="h-48 bg-gray-200 overflow-hidden relative">
+            <img src="assets/images/recoleta.jpg" onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80'" alt="La Recoleta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <span class="absolute top-3 right-3 bg-emerald-800 text-white text-xs px-2 py-1 rounded font-semibold shadow">Mirador / Museo</span>
+          </div>
+          <div class="p-5 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-bold text-lg text-gray-900 group-hover:text-emerald-700 transition">Convento de La Recoleta</h3>
+              <p class="text-gray-600 text-sm mt-1 line-clamp-2">Convento franciscano histórico con una vista panorámica de Sucre.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 font-medium">
+              <span><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Calle Polanco</span>
+              <span class="text-emerald-700 font-bold flex items-center">Ver detalles <i class="fa-solid fa-chevron-right ml-1"></i></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 py-8 px-4 text-center mt-12 text-sm border-t border-gray-800">
+    <div class="max-w-6xl mx-auto space-y-4">
+      <p class="font-semibold text-white">Policía Turística - Comando Departamental de Chuquisaca</p>
+      <p class="text-gray-400">Sucre, Bolivia &copy; 2026. Servicio de protección y orientación al visitante.</p>
+    </div>
+  </footer>
+
+  <!-- ==================== MODALES ==================== -->
+
+  <!-- Modal 1: Robo -->
+  <div id="modal-robo" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 backdrop-blur-sm" onclick="closeModalOnBackdrop(event, 'modal-robo')">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 relative shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
+      <button onclick="closeModal('modal-robo')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100">&times;</button>
+      <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+        <i class="fa-solid fa-hand-holding-hand text-red-500 mr-2"></i> Pérdida o Robo
+      </h3>
+      <div class="space-y-3 text-gray-700 text-sm overflow-y-auto pr-2">
+        <p><strong>1. Acude a la oficina policial más cercana:</strong> Puedes dirigirte a la Módulo Policial de la Plaza 25 de Mayo.</p>
+        <p><strong>2. Denuncia oficial:</strong> Dirígete a la FELCC (Fuerza Especial de Lucha Contra el Crimen) para formalizar el reporte.</p>
+        <p><strong>3. Tarjetas bancarias:</strong> Bloquea tus tarjetas de inmediato desde las aplicaciones móviles de tu banco.</p>
+      </div>
+      <div class="mt-6 pt-4 border-t flex justify-end">
+        <button onclick="closeModal('modal-robo')" class="bg-emerald-800 text-white px-5 py-2 rounded-lg font-semibold hover:bg-emerald-700 transition">Entendido</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Salud -->
+  <div id="modal-salud" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 backdrop-blur-sm" onclick="closeModalOnBackdrop(event, 'modal-salud')">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 relative shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
+      <button onclick="closeModal('modal-salud')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100">&times;</button>
+      <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+        <i class="fa-solid fa-kit-medical text-blue-500 mr-2"></i> Emergencia Médica
+      </h3>
+      <div class="space-y-3 text-gray-700 text-sm overflow-y-auto pr-2">
+        <p><strong>Centros de salud recomendados en Sucre:</strong></p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li><strong>Hospital Santa Bárbara:</strong> Calle Calle Junín #123</li>
+          <li><strong>Clínica Santa María:</strong> Av. Venezuela</li>
+        </ul>
+        <p class="mt-2"><strong>Mal de Altura (Soroche):</strong> Descansa las primeras horas, toma mate de coca y mantente bien hidratado.</p>
+      </div>
+      <div class="mt-6 pt-4 border-t flex justify-end">
+        <button onclick="closeModal('modal-salud')" class="bg-emerald-800 text-white px-5 py-2 rounded-lg font-semibold hover:bg-emerald-700 transition">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Documentos -->
+  <div id="modal-docs" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 backdrop-blur-sm" onclick="closeModalOnBackdrop(event, 'modal-docs')">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 relative shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
+      <button onclick="closeModal('modal-docs')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100">&times;</button>
+      <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+        <i class="fa-solid fa-id-card text-amber-500 mr-2"></i> Extravío de Documentos
+      </h3>
+      <div class="space-y-3 text-gray-700 text-sm overflow-y-auto pr-2">
+        <p>Si perdiste tu pasaporte o documento de identidad extranjero:</p>
+        <ol class="list-decimal pl-5 space-y-1">
+          <li>Solicita una constancia de extravío en la FELCC.</li>
+          <li>Contacta con la embajada o consulado de tu país.</li>
+          <li>Informa a la Interpol / Dirección de Migración en Bolivia.</li>
+        </ol>
+      </div>
+      <div class="mt-6 pt-4 border-t flex justify-end">
+        <button onclick="closeModal('modal-docs')" class="bg-emerald-800 text-white px-5 py-2 rounded-lg font-semibold hover:bg-emerald-700 transition">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: Casa de la Libertad -->
+  <div id="modal-casa-libertad" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 backdrop-blur-sm" onclick="closeModalOnBackdrop(event, 'modal-casa-libertad')">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 relative shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
+      <button onclick="closeModal('modal-casa-libertad')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100">&times;</button>
+      <h3 class="text-xl font-bold text-gray-900 mb-2">Casa de la Libertad</h3>
+      <p class="text-xs text-emerald-800 font-semibold mb-4"><i class="fa-solid fa-clock mr-1"></i> Lun a Sáb: 09:00 - 16:30</p>
+      <div class="space-y-3 text-gray-700 text-sm overflow-y-auto pr-2">
+        <p>Considerado el monumento histórico nacional más importante de Bolivia. Aquí se firmó el Acta de Independencia en 1825.</p>
+        <p><strong>Recomendación de seguridad:</strong> Área de muy bajo riesgo, con presencia constante de la Policía Turística en la Plaza 25 de Mayo.</p>
+      </div>
+      <div class="mt-6 pt-4 border-t flex justify-end">
+        <button onclick="closeModal('modal-casa-libertad')" class="bg-emerald-800 text-white px-5 py-2 rounded-lg font-semibold hover:bg-emerald-700 transition">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5: La Recoleta -->
+  <div id="modal-la-recoleta" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 backdrop-blur-sm" onclick="closeModalOnBackdrop(event, 'modal-la-recoleta')">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 relative shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
+      <button onclick="closeModal('modal-la-recoleta')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100">&times;</button>
+      <h3 class="text-xl font-bold text-gray-900 mb-2">Convento de La Recoleta</h3>
+      <p class="text-xs text-emerald-800 font-semibold mb-4"><i class="fa-solid fa-clock mr-1"></i> Mar a Sáb: 09:00 - 11:30 | 14:30 - 16:30</p>
+      <div class="space-y-3 text-gray-700 text-sm overflow-y-auto pr-2">
+        <p>Ubicado al pie del cerro Churuquella, cuenta con un hermoso mirador desde donde se aprecia toda la ciudad blanca.</p>
+        <p><strong>Recomendación de seguridad:</strong> Mantenerse en las zonas transitadas del mirador y evitar subir al cerro en horarios nocturnos.</p>
+      </div>
+      <div class="mt-6 pt-4 border-t flex justify-end">
+        <button onclick="closeModal('modal-la-recoleta')" class="bg-emerald-800 text-white px-5 py-2 rounded-lg font-semibold hover:bg-emerald-700 transition">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== LÓGICA DE JAVASCRIPT ==================== -->
+  <!-- Nota: Script externo opcional apuntando a la carpeta assets/ -->
+  <!-- <script src="assets/js/museos.js"></script> -->
+
+  <script>
+    let activeModalId = null;
+
+    // Función para abrir modal y registrar en el historial de navegación
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden'; // Evita el scroll de fondo
+        activeModalId = modalId;
+
+        // Añadir entrada al historial de navegación para el botón "atrás" móvil
+        history.pushState({ modalOpen: modalId }, '', `#${modalId}`);
+      }
+    }
+
+    // Función para cerrar el modal
+    function closeModal(modalId, isPopState = false) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = ''; // Restaura el scroll
+        
+        // Si el cierre fue por click manual y no por el botón "atrás", retrocedemos el historial
+        if (!isPopState && history.state && history.state.modalOpen === modalId) {
+          history.back();
+        }
+        activeModalId = null;
+      }
+    }
+
+    // Cerrar al hacer clic en el fondo oscuro
+    function closeModalOnBackdrop(event, modalId) {
+      if (event.target.id === modalId) {
+        closeModal(modalId);
+      }
+    }
+
+    // Escuchar el evento "Atrás" del navegador o gesto móvil
+    window.addEventListener('popstate', function (event) {
+      if (activeModalId) {
+        closeModal(activeModalId, true);
+      }
+    });
+  </script>
 </body>
+</html>
