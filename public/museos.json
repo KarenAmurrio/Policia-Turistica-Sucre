@@ -1,0 +1,187 @@
+[
+  {
+    "id": "san-francisco",
+    "nombre": "Templo Museo San Francisco de Asís",
+    "mapaUrl": "https://maps.google.com/?q=Templo+San+Francisco+Sucre",
+    "descripcion": "Un histórico templo colonial famoso por sus impresionantes criptas subterráneas y sus cubiertas de tejas. En el tejado disfrutarás de las mejores vistas panorámicas de la ciudad.",
+    "imagen": "./public/museos/san-francisco.jpg",
+    "horarios": [
+      { "dias": "Lunes a Sábados", "horas": "09:00 - 12:00 / 15:00 - 17:00" }
+    ],
+    "costos": [
+      { "concepto": "Nacionales", "precio": "15 Bs" },
+      { "concepto": "Extranjeros", "precio": "20 Bs" },
+      { "concepto": "Estudiantes", "precio": "10 Bs" }
+    ]
+  },
+  {
+    "id": "casa-libertad",
+    "nombre": "Casa de la Libertad",
+    "mapaUrl": "https://maps.google.com/?q=Casa+de+la+Libertad+Sucre",
+    "descripcion": "Edificio histórico donde se firmó el Acta de la Independencia de Bolivia. Alberga salas con objetos coloniales y retratos de la historia nacional.",
+    "imagen": "./public/museos/casa-libertad.jpg",
+    "horarios": [
+      { "dias": "Lunes a Viernes", "horas": "08:30 - 16:30" },
+      { "dias": "Sábados y Domingos", "horas": "09:00 - 13:00" }
+    ],
+    "costos": [
+      { "concepto": "Nacionales", "precio": "15 Bs" },
+      { "concepto": "Extranjeros", "precio": "40 Bs" },
+      { "concepto": "Permiso para fotos/video", "precio": "10 Bs" }
+    ]
+  },
+  {
+    "id": "asur",
+    "nombre": "Museo ASUR",
+    "mapaUrl": "https://maps.google.com/?q=Museo+ASUR+Sucre",
+    "descripcion": "Muestra del arte textil indígena de las culturas Jalq'a y Tarabuco, resaltando sus técnicas ancestrales y la riqueza de sus diseños.",
+    "imagen": "./public/museos/asur.jpg",
+    "horarios": [
+      { "dias": "Lunes a Sábados", "horas": "08:30 - 12:00 / 14:30 - 18:00" }
+    ],
+    "costos": [
+      { "concepto": "Nacionales", "precio": "15 Bs" },
+      { "concepto": "Extranjeros", "precio": "25 Bs" }
+    ]
+  },
+  {
+    "id": "catedral-metropolitana",
+    "nombre": "Catedral Metropolitana",
+    "mapaUrl": "https://maps.google.com/?q=Catedral+Metropolitana+Sucre",
+    "descripcion": "Estructura monumental de arquitectura renacentista y barroca con una rica colección de arte sacro e imaginería religiosa.",
+    "imagen": "./public/museos/catedral.jpg",
+    "horarios": [
+      { "dias": "Lunes a Viernes", "horas": "10:00 - 12:00 / 15:00 - 17:00" },
+      { "dias": "Sábados", "horas": "10:00 - 12:00" }
+    ],
+    "costos": [
+      { "concepto": "Nacionales", "precio": "15 Bs" },
+      { "concepto": "Extranjeros", "precio": "25 Bs" },
+      { "concepto": "Estudiantes y Niños", "precio": "10 Bs" }
+    ]
+  },
+  {
+    "id": "san-felipe-neri",
+    "nombre": "San Felipe de Neri",
+    "mapaUrl": "https://maps.google.com/?q=San+Felipe+Neri+Sucre",
+    "descripcion": "Antiguo convento de estilo neoclásico con impresionante terraza desde donde se contempla el paisaje de la ciudad blanca de Sucre.",
+    "imagen": "./public/museos/san-felipe-neri.jpg",
+    "horarios": [
+      { "dias": "Lunes a Sábados", "horas": "14:30 - 18:00" }
+    ],
+    "costos": [
+      { "concepto": "Extranjeros", "precio": "20 Bs" },
+      { "concepto": "Nacionales", "precio": "15 Bs" }
+    ]
+  },
+  {
+    "id": "recoleta",
+    "nombre": "Museo Franciscano del Convento de La Recoleta",
+    "mapaUrl": "https://maps.google.com/?q=Convento+de+La+Recoleta+Sucre",
+    "descripcion": "Hermoso complejo ubicado al pie del cerro Churuquella con colecciones de pintura colonial de los siglos XVI a XIX y jardines con el famoso milenario cedro.",
+    "imagen": "./public/museos/recoleta.jpg",
+    "horarios": [
+      { "dias": "Lunes a Viernes", "horas": "09:00 - 11:30 / 14:30 - 16:30" },
+      { "dias": "Sábados", "horas": "09:00 - 11:30" }
+    ],
+    "costos": [
+      { "concepto": "Extranjeros", "precio": "20 Bs" },
+      { "concepto": "Nacionales", "precio": "15 Bs" },
+      { "concepto": "Niños", "precio": "5 Bs" }
+    ]
+  },
+  {
+    "id": "santa-clara",
+    "nombre": "Museo Santa Clara",
+    "mapaUrl": "https://maps.google.com/?q=Museo+Santa+Clara+Sucre",
+    "descripcion": "El histórico convento posee valiosas muestras de arte colonial y reliquias de las monjas Clarisas, así como un tranquilo patio colonial.",
+    "imagen": "./public/museos/santa-clara.jpg",
+    "horarios": [
+      { "dias": "Lunes a Viernes", "horas": "09:00 - 12:00 / 14:30 - 17:30" }
+    ],
+    "costos": [
+      { "concepto": "Nacionales", "precio": "15 Bs" },
+      { "concepto": "Extranjeros", "precio": "30 Bs" },
+      { "concepto": "Estudiantes / Cúpula", "precio": "10 Bs" }
+    ]
+  },
+  {
+    "id": "santa-teresa",
+    "nombre": "Museo Convento Santa Teresa",
+    "mapaUrl": "https://maps.google.com/?q=Convento+Santa+Teresa+Sucre",
+    "descripcion": "Monasterio de clausura de las Carmelitas Descalzas que conserva valiosas piezas religiosas y muestra la austera vida de las monjas desde el siglo XVII.",
+    "imagen": "./public/museos/santa-teresa.jpg",
+    "horarios": [
+      { "dias": "Lunes a Viernes", "horas": "09:00 - 12:00 / 14:30 - 17:00" },
+      { "dias": "Sábados", "horas": "09:00 - 12:00" }
+    ],
+    "costos": [
+      { "concepto": "Nacionales", "precio": "15 Bs" },
+      { "concepto": "Extranjeros", "precio": "30 Bs" },
+      { "concepto": "Estudiantes", "precio": "10 Bs" }
+    ]
+  },
+  {
+    "id": "museo-chocolate",
+    "nombre": "Museo del Chocolate",
+    "mapaUrl": "https://maps.google.com/?q=Museo+del+Chocolate+Paraati+Sucre",
+    "descripcion": "Un espacio dedicado a la tradición chocolatera de la ciudad, donde aprenderás sobre la historia, transformación del cacao y elaboración del chocolate.",
+    "imagen": "./public/museos/chocolate.jpg",
+    "horarios": [
+      { "dias": "Lunes a Viernes", "horas": "09:30 - 12:00 / 14:30 - 18:30" },
+      { "dias": "Sábados", "horas": "09:30 - 12:00 / 15:00 - 17:30" }
+    ],
+    "costos": [
+      { "concepto": "Nacionales", "precio": "10 Bs" },
+      { "concepto": "Extranjeros", "precio": "15 Bs" },
+      { "concepto": "Niños", "precio": "5 Bs" }
+    ]
+  },
+  {
+    "id": "parque-cretacico",
+    "nombre": "Parque Cretácico",
+    "mapaUrl": "https://maps.google.com/?q=Parque+Cretacico+Cal+Orcko+Sucre",
+    "descripcion": "Sitio paleontológico único con la mayor cantidad de huellas de dinosaurio del planeta, maquetas a tamaño real y Museo Paleontológico.",
+    "imagen": "./public/museos/parque-cretacico.jpg",
+    "horarios": [
+      { "dias": "Martes a Domingo", "horas": "09:00 - 17:00" },
+      { "dias": "Lunes", "horas": "Cerrado" }
+    ],
+    "costos": [
+      { "concepto": "Extranjeros", "precio": "30 Bs" },
+      { "concepto": "Nacionales", "precio": "10 Bs" },
+      { "concepto": "Permiso Cámara", "precio": "5 Bs" }
+    ]
+  },
+  {
+    "id": "museo-tesoro",
+    "nombre": "Museo del Tesoro",
+    "mapaUrl": "https://maps.google.com/?q=Museo+del+Tesoro+Sucre",
+    "descripcion": "Centro de interpretación de las piedras preciosas, orfebrería y minería de Bolivia, ubicado en una hermosa casona del centro histórico.",
+    "imagen": "./public/museos/museo-tesoro.jpg",
+    "horarios": [
+      { "dias": "Lunes a Domingo", "horas": "09:00 - 12:30 / 15:00 - 18:30" }
+    ],
+    "costos": [
+      { "concepto": "Nacionales", "precio": "25 Bs" },
+      { "concepto": "Extranjeros", "precio": "35 Bs" },
+      { "concepto": "Estudiantes / Niños", "precio": "15 Bs" }
+    ]
+  },
+  {
+    "id": "museo-charcas",
+    "nombre": "Museo Colonial Charcas",
+    "mapaUrl": "https://maps.google.com/?q=Museo+Charcas+Sucre",
+    "descripcion": "Posee galerías de arte virreinal, arte moderno y una impresionante sección antropológica con momias y objetos arqueológicos prehispánicos.",
+    "imagen": "./public/museos/charcas.jpg",
+    "horarios": [
+      { "dias": "Lunes a Viernes", "horas": "08:30 - 12:00 / 14:30 - 18:00" },
+      { "dias": "Sábados", "horas": "09:00 - 12:00" }
+    ],
+    "costos": [
+      { "concepto": "Nacionales", "precio": "15 Bs" },
+      { "concepto": "Extranjeros", "precio": "30 Bs" },
+      { "concepto": "Estudiantes", "precio": "10 Bs" }
+    ]
+  }
+]
