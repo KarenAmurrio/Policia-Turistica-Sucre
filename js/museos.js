@@ -3,7 +3,7 @@ async function cargarMuseos() {
 
     try {
         // 1. Cargar el JSON
-        const respuesta = await fetch('./public/museos.json');
+        const respuesta = await fetch('./assets/museos.json');
         const museos = await respuesta.json();
 
         // Limpiar el mensaje de carga
