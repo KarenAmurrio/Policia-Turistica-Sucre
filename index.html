@@ -32,6 +32,9 @@
         <img src="./assets/logo.webp" alt="Escudo Policía Turística" class="w-28 h-auto mb-3 drop-shadow-xl" onerror="this.onerror=null; this.src='https://via.placeholder.com/120x140/3A4B2D/F4F6F0?text=POLICIA+TURISTICA';">
         <h1 class="text-2xl sm:text-3xl font-black text-white">@PoliciaTuristica</h1>
         <p class="text-xs uppercase font-semibold text-policia-dorado mt-1">Policía Boliviana • Sucre, Bolivia</p>
+        <p class="text-sm text-gray-300 mt-1">La Policía Turística de Bolivia es una unidad especializada encargada de proteger, orientar y brindar auxilio a los turistas nacionales y extranjeros.</p>
+        <hr class="w-16 border-t border-policia-dorado/50 my-3">
+        <p class="text-sm text-gray-300 mt-1">The Tourist Police, a specialized unit of the Bolivian Police, provides protection, guidance, and assistance to domestic and foreign visitors.</p>
         
         <div class="flex w-32 h-1 mt-4 rounded-full overflow-hidden">
             <div class="w-1/3 bg-b-rojo"></div>
@@ -75,9 +78,20 @@
             </div>
         </div>
 
+        <!-- ================= INFORMACIÓN DE MUSEOS INGLES ================= -->
+        <div onclick="openModal('modal-museums')" class="bg-policia-verde-card border border-policia-dorado/30 rounded-2xl p-4 sm:p-5 shadow-lg flex items-center justify-between cursor-pointer hover:bg-policia-verde-hover active:scale-[0.98] transition-all">
+            <div class="flex items-center space-x-3">
+                <span class="text-2xl">🏛️</span>
+                <div>
+                    <h2 class="font-bold text-base sm:text-lg text-white">MUSEUM INFORMATION</h2>
+                    <p class="text-xs text-policia-dorado font-medium">Hours and cultural circuits</p>
+                </div>
+            </div>
+        </div>
+
         <!-- Teléfonos de Emergencia -->
         <div class="pt-2 space-y-2">
-            <h3 class="text-xs font-bold text-policia-dorado uppercase tracking-widest pl-1">Emergencias Sucre</h3>
+            <h3 class="text-xs font-bold text-policia-dorado uppercase tracking-widest pl-1"> Telefonos de Emergencias</h3>
             <div class="grid grid-cols-2 gap-2">
                 <a href="tel:64650265" class="col-span-2 flex items-center justify-between p-3 bg-policia-verde-card border border-policia-dorado/40 rounded-xl font-bold text-white text-xs hover:border-policia-dorado transition-all">
                     <span>👮‍♂️ Policía Turística</span>
@@ -179,7 +193,34 @@
         </div>
     </div>
 
-    <!-- Script de control con Historial -->
+    <!-- ================= MODAL MUSEOS Ingles ================= -->
+    <div id="modal-museums" class="modal-container fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-2 sm:p-4 transition-all">
+        <div class="relative w-full max-w-lg bg-[#1C3A27] rounded-3xl shadow-2xl border border-policia-dorado/40 max-h-[90dvh] flex flex-col overflow-hidden my-auto">
+            <button onclick="closeModal('modal-museums')" aria-label="Cerrar" class="absolute top-3 right-3 z-30 bg-red-800/90 hover:bg-red-800 text-white rounded-full p-2.5 transition-transform active:scale-95 shadow-xl border border-red-500/50 flex items-center justify-center">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <div class="p-4 pt-5 pb-3 text-center border-b border-policia-dorado/20 bg-[#1C3A27] pr-12">
+                <h2 class="text-lg sm:text-xl font-extrabold text-[#E5C158] tracking-wide uppercase leading-tight">Museum Information</h2>
+                <p class="text-xs text-gray-300 font-medium mt-0.5">Sucre, Bolivia</p>
+            </div>
+            <div id="list-museums" class="flex-1 overflow-y-auto p-4 space-y-4 pb-24 overscroll-contain -webkit-overflow-scrolling-touch">
+                <!-- JS inyectará las tarjetas aquí -->
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#1C3A27] via-[#1C3A27]/95 to-transparent flex justify-center z-20 pt-6">
+                <!-- Ruta de PDF actualizada a assets -->
+                <a href="./assets/InformacionMuseos.pdf" download class="w-full py-3.5 px-4 bg-[#E5C158] hover:bg-[#d4b047] text-[#1C3A27] font-black text-xs sm:text-sm rounded-2xl shadow-xl flex items-center justify-center gap-2 transition-transform active:scale-95 border border-amber-300/40 uppercase tracking-wider">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
+                    DOWNLOAD GUIDE IN PDF
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Historial -->
     <script>
         function openModal(modalId) {
             const modal = document.getElementById(modalId);
@@ -211,7 +252,7 @@
         });
     </script>
 
-    <!-- Nota: Si tu carpeta JS está dentro de assets, cambia la ruta a ./assets/js/museos.js -->
     <script src="./js/museos.js"></script>
+    <script src="./js/museums.js"></script>
 </body>
 </html>

@@ -1,0 +1,328 @@
+[
+  {
+    "id": "san-francisco",
+    "nombre": "San Francisco de Asís Temple Museum",
+    "mapaUrl": "https://maps.google.com/?q=Templo+San+Francisco+Sucre",
+    "descripcion": "A historic colonial church famous for its impressive underground crypts and tiled roofs. From the roof, you'll enjoy the best panoramic views of the city.",
+    "imagen": "./assets/museos/san-francisco.jpg",
+    "horarios": [
+      { "dias": "Monday to Saturday", "horas": "09:00 - 12:00 / 15:00 - 17:00" }
+    ],
+    "costos": [
+      { "concepto": "Nationals", "precio": "15 Bs" },
+      { "concepto": "Foreigners", "precio": "20 Bs" },
+      { "concepto": "Students", "precio": "10 Bs" }
+    ]
+  },
+  {
+    "id": "casa-libertad",
+    "nombre": "Freedom House (Casa de la Libertad)",
+    "mapaUrl": "https://maps.google.com/?q=Casa+de+la+Libertad+Sucre",
+    "descripcion": "Historic building where the Bolivian Declaration of Independence was signed. Houses rooms filled with colonial artifacts and portraits from national history.",
+    "imagen": "./assets/museos/casa-libertad.jpg",
+    "horarios": [
+      { "dias": "Monday to Friday", "horas": "08:30 - 16:30" },
+      { "dias": "Saturday and Sunday", "horas": "09:00 - 13:00" }
+    ],
+    "costos": [
+      { "concepto": "Nationals", "precio": "15 Bs" },
+      { "concepto": "Foreigners", "precio": "40 Bs" },
+      { "concepto": "Photo/Video Permit", "precio": "10 Bs" }
+    ]
+  },
+  {
+    "id": "asur",
+    "nombre": "ASUR Museum",
+    "mapaUrl": "https://maps.google.com/?q=Museo+ASUR+Sucre",
+    "descripcion": "Exhibits indigenous textile art from the Jalq'a and Tarabuco cultures, highlighting their ancestral techniques and rich designs.",
+    "imagen": "./assets/museos/asur.jpg",
+    "horarios": [
+      { "dias": "Monday to Saturday", "horas": "08:30 - 12:00 / 14:30 - 18:00" }
+    ],
+    "costos": [
+      { "concepto": "Nationals", "precio": "15 Bs" },
+      { "concepto": "Foreigners", "precio": "25 Bs" }
+    ]
+  },
+  {
+    "id": "catedral-metropolitana",
+    "nombre": "Metropolitan Cathedral",
+    "mapaUrl": "https://maps.google.com/?q=Catedral+Metropolitana+Sucre",
+    "descripcion": "A monumental structure featuring Renaissance and Baroque architecture with a rich collection of sacred art and religious imagery.",
+    "imagen": "./assets/museos/catedral.webp",
+    "horarios": [
+      { "dias": "Monday to Friday", "horas": "10:00 - 12:00 / 15:00 - 17:00" },
+      { "dias": "Saturday", "horas": "10:00 - 12:00" }
+    ],
+    "costos": [
+      { "concepto": "Nationals", "precio": "15 Bs" },
+      { "concepto": "Foreigners", "precio": "25 Bs" },
+      { "concepto": "Students and Children", "precio": "10 Bs" }
+    ]
+  },
+  {
+    "id": "san-felipe-neri",
+    "nombre": "San Felipe de Neri",
+    "mapaUrl": "https://maps.google.com/?q=San+Felipe+Neri+Sucre",
+    "descripcion": "Former Neoclassical convent featuring an impressive rooftop terrace overlooking the white city landscape of Sucre.",
+    "imagen": "./assets/museos/san-felipe-neri.webp",
+    "horarios": [
+      { "dias": "Monday to Saturday", "horas": "14:30 - 18:00" }
+    ],
+    "costos": [
+      { "concepto": "Foreigners", "precio": "20 Bs" },
+      { "concepto": "Nationals", "precio": "15 Bs" }
+    ]
+  },
+  {
+    "id": "recoleta",
+    "nombre": "Franciscan Museum of La Recoleta Convent",
+    "mapaUrl": "https://maps.google.com/?q=Convento+de+La+Recoleta+Sucre",
+    "descripcion": "Beautiful complex at the foot of Churuquella hill featuring collections of 16th to 19th-century colonial paintings and gardens housing the famous ancient cedar tree.",
+    "imagen": "./assets/museos/recoleta.webp",
+    "horarios": [
+      { "dias": "Monday to Friday", "horas": "09:00 - 11:30 / 14:30 - 16:30" },
+      { "dias": "Saturday", "horas": "09:00 - 11:30" }
+    ],
+    "costos": [
+      { "concepto": "Foreigners", "precio": "20 Bs" },
+      { "concepto": "Nationals", "precio": "15 Bs" },
+      { "concepto": "Children", "precio": "5 Bs" }
+    ]
+  },
+  {
+    "id": "santa-clara",
+    "nombre": "Santa Clara Museum",
+    "mapaUrl": "https://maps.google.com/?q=Museo+Santa+Clara+Sucre",
+    "descripcion": "This historic convent houses valuable colonial artwork and relics of the Poor Clare nuns, as well as a peaceful colonial courtyard.",
+    "imagen": "./assets/museos/santa-clara.webp",
+    "horarios": [
+      { "dias": "Monday to Friday", "horas": "09:00 - 12:00 / 14:30 - 17:30" }
+    ],
+    "costos": [
+      { "concepto": "Nationals", "precio": "15 Bs" },
+      { "concepto": "Foreigners", "precio": "30 Bs" },
+      { "concepto": "Students / Dome Access", "precio": "10 Bs" }
+    ]
+  },
+  {
+    "id": "santa-teresa",
+    "nombre": "Santa Teresa Convent Museum",
+    "mapaUrl": "https://maps.google.com/?q=Convento+Santa+Teresa+Sucre",
+    "descripcion": "A cloistered monastery of the Discalced Carmelites that preserves valuable religious items and showcases the austere lifestyle of the nuns since the 17th century.",
+    "imagen": "./assets/museos/santa-teresa.webp",
+    "horarios": [
+      { "dias": "Monday to Friday", "horas": "09:00 - 12:00 / 14:30 - 17:00" },
+      { "dias": "Saturday", "horas": "09:00 - 12:00" }
+    ],
+    "costos": [
+      { "concepto": "Nationals", "precio": "15 Bs" },
+      { "concepto": "Foreigners", "precio": "30 Bs" },
+      { "concepto": "Students", "precio": "10 Bs" }
+    ]
+  },
+  {
+    "id": "museo-chocolate",
+    "nombre": "Chocolate Museum",
+    "mapaUrl": "https://maps.google.com/?q=Museo+del+Chocolate+Paraati+Sucre",
+    "descripcion": "A space dedicated to the city's chocolate-making tradition, where you can learn about history, cocoa processing, and chocolate crafting.",
+    "imagen": "./assets/museos/chocolate.webp",
+    "horarios": [
+      { "dias": "Monday to Friday", "horas": "09:30 - 12:00 / 14:30 - 18:30" },
+      { "dias": "Saturday", "horas": "09:30 - 12:00 / 15:00 - 17:30" }
+    ],
+    "costos": [
+      { "concepto": "Nationals", "precio": "10 Bs" },
+      { "concepto": "Foreigners", "precio": "15 Bs" },
+      { "concepto": "Children", "precio": "5 Bs" }
+    ]
+  },
+  {
+    "id": "parque-cretacico",
+    "nombre": "Cretaceous Park",
+    "mapaUrl": "https://maps.google.com/?q=Parque+Cretacico+Cal+Orcko+Sucre",
+    "descripcion": "A unique paleontological site boasting the world's largest concentration of dinosaur footprints, life-sized replicas, and a Paleontological Museum.",
+    "imagen": "./assets/museos/parque-cretacico.webp",
+    "horarios": [
+      { "dias": "Tuesday to Sunday", "horas": "09:00 - 17:00" },
+      { "dias": "Monday", "horas": "Closed" }
+    ],
+    "costos": [
+      { "concepto": "Foreigners", "precio": "30 Bs" },
+      { "concepto": "Nationals", "precio": "10 Bs" },
+      { "concepto": "Camera Permit", "precio": "5 Bs" }
+    ]
+  },
+  {
+    "id": "museo-tesoro",
+    "nombre": "Treasure Museum",
+    "mapaUrl": "https://maps.google.com/?q=Museo+del+Treasure+Sucre",
+    "descripcion": "An interpretation center for gemstones, goldsmithing, and mining in Bolivia, located inside a beautiful mansion in the historic center.",
+    "imagen": "./assets/museos/museo-tesoro.webp",
+    "horarios": [
+      { "dias": "Monday to Sunday", "horas": "09:00 - 12:30 / 15:00 - 18:30" }
+    ],
+    "costos": [
+      { "concepto": "Nationals", "precio": "25 Bs" },
+      { "concepto": "Foreigners", "precio": "35 Bs" },
+      { "concepto": "Students / Children", "precio": "15 Bs" }
+    ]
+  },
+  {
+    "id": "museo-charcas",
+    "nombre": "Charcas Colonial Museum",
+    "mapaUrl": "https://maps.google.com/?q=Museo+Charcas+Sucre",
+    "descripcion": "Features art galleries of viceregal and modern art alongside an impressive anthropological section with mummies and pre-Hispanic artifacts.",
+    "imagen": "./assets/museos/charcas.webp",
+    "horarios": [
+      { "dias": "Monday to Friday", "horas": "08:30 - 12:00 / 14:30 - 18:00" },
+      { "dias": "Saturday", "horas": "09:00 - 12:00" }
+    ],
+    "costos": [
+      { "concepto": "Nationals", "precio": "15 Bs" },
+      { "concepto": "Foreigners", "precio": "30 Bs" },
+      { "concepto": "Students", "precio": "10 Bs" }
+    ]
+  },
+  {
+    "id": "museo-alfredo-gutierrez-valenzuela",
+    "nombre": "Dr. Alfredo Gutiérrez Valenzuela Museum",
+    "mapaUrl": "https://maps.google.com/?q=Plaza+25+de+mayo+N22+Sucre",
+    "descripcion": "Displays the discreet, aristocratic lifestyle of the 19th and early 20th centuries through collections of porcelain, glassware, sculptures, and antique furniture.",
+    "imagen": "./assets/museos/gutierrez-valenzuela.webp",
+    "horarios": [
+      { "dias": "Monday to Friday", "horas": "09:00 - 12:30 / 14:30 - 18:30" },
+      { "dias": "Saturday", "horas": "09:30 - 12:00" }
+    ],
+    "costos": [
+      { "concepto": "Foreigners", "precio": "20 Bs" },
+      { "concepto": "Nationals", "precio": "10 Bs" },
+      { "concepto": "Children", "precio": "2 Bs" }
+    ]
+  },
+  {
+    "id": "museo-costumbrista-mariano-deheza",
+    "nombre": "Dr. Mariano Deheza Costumbrista Museum",
+    "mapaUrl": "https://maps.google.com/?q=San+Alberto+N156+Sucre",
+    "descripcion": "Recreates colonial and republican settings using traditional clothing, silverware, and historical artifacts from the 19th and 20th centuries.",
+    "imagen": "./assets/museos/mariano-deheza.webp",
+    "horarios": [
+      { "dias": "Monday to Friday", "horas": "09:00 - 12:30 / 14:30 - 18:30" },
+      { "dias": "Saturday", "horas": "09:30 - 12:00" }
+    ],
+    "costos": [
+      { "concepto": "Foreigners", "precio": "20 Bs" },
+      { "concepto": "Nationals", "precio": "10 Bs" },
+      { "concepto": "Students", "precio": "2 Bs" }
+    ]
+  },
+  {
+    "id": "museo-comunicacion-subterraneos",
+    "nombre": "Museum of Communication and Secret Tunnels",
+    "mapaUrl": "https://maps.google.com/?q=Plazuela+Libertad+N20+Sucre",
+    "descripcion": "A journey through the history of journalism and media that includes underground stone tunnels and colonial mummies.",
+    "imagen": "./assets/museos/comunicacion-subterraneos.webp",
+    "horarios": [
+      { "dias": "Monday to Friday", "horas": "09:00 - 12:30 / 14:30 - 18:30" },
+      { "dias": "Saturday", "horas": "09:20 - 12:30" }
+    ],
+    "costos": [
+      { "concepto": "Nationals", "precio": "30 Bs" },
+      { "concepto": "Foreigners", "precio": "70 Bs" },
+      { "concepto": "Children (12 to 18 years)", "precio": "15 Bs" },
+      { "concepto": "Under 12 years old", "precio": "Free" }
+    ]
+  },
+  {
+    "id": "castillo-de-la-glorieta",
+    "nombre": "La Glorieta Castle",
+    "mapaUrl": "https://maps.google.com/?q=Castillo+de+la+Glorieta+Sucre",
+    "descripcion": "A unique architectural monument combining Gothic, Baroque, and Moorish styles; former home of the Prince and Princess of La Glorieta.",
+    "imagen": "./assets/museos/castillo-glorieta.webp",
+    "horarios": [
+      { "dias": "Tuesday to Saturday", "horas": "09:00 - 17:00" },
+      { "dias": "Sundays and Holidays", "horas": "09:00 - 16:00" }
+    ],
+    "costos": [
+      { "concepto": "Nationals", "precio": "15 Bs" },
+      { "concepto": "Foreigners", "precio": "25 Bs" },
+      { "concepto": "Children", "precio": "5 Bs" },
+      { "concepto": "Virtual Reality", "precio": "10 Bs" }
+    ]
+  },
+  {
+    "id": "palacete-de-la-florida",
+    "nombre": "La Florida Mansion",
+    "mapaUrl": "https://maps.google.com/?q=Zona+La+Florida+Sucre",
+    "descripcion": "Republican-era estate of former Bolivian President Aniceto Arce featuring original wall paintings and classic-style gardens.",
+    "imagen": "./assets/museos/palacete-florida.webp",
+    "horarios": [
+      { "dias": "Tuesday to Saturday", "horas": "09:00 - 17:00" },
+      { "dias": "Sundays and Holidays", "horas": "09:00 - 16:00" }
+    ],
+    "costos": [
+      { "concepto": "Nationals", "precio": "10 Bs" },
+      { "concepto": "Foreigners", "precio": "15 Bs" },
+      { "concepto": "Children", "precio": "5 Bs" }
+    ]
+  },
+  {
+    "id": "mirador-de-la-mansarda",
+    "nombre": "Mansarda Viewpoint",
+    "mapaUrl": "https://maps.google.com/?q=Plaza+25+de+mayo+N10+Sucre",
+    "descripcion": "Located inside the Government Building of Chuquisaca, it offers one of the finest panoramic views of 25 de Mayo Square and the historic center.",
+    "imagen": "./assets/museos/mirador-mansarda.webp",
+    "horarios": [
+      { "dias": "Tuesday to Friday", "horas": "08:00 - 12:00 / 14:30 - 18:30" },
+      { "dias": "Saturday", "horas": "09:00 - 17:00" },
+      { "dias": "Sundays and Holidays", "horas": "09:00 - 16:00" }
+    ],
+    "costos": [
+      { "concepto": "Nationals", "precio": "10 Bs" },
+      { "concepto": "Foreigners", "precio": "15 Bs" },
+      { "concepto": "Children (6 to 12 years)", "precio": "5 Bs" }
+    ]
+  },
+  {
+    "id": "museo-instituto-medico-sucre",
+    "nombre": "Sucre Medical Institute Museum",
+    "mapaUrl": "https://maps.google.com/?q=Calle+San+Alberto+N30+Sucre",
+    "descripcion": "Exhibits educational scale models from 1896, anatomical specimens, taxidermy animals, and historical medical instruments.",
+    "imagen": "./assets/museos/instituto-medico.webp",
+    "horarios": [
+      { "dias": "Monday to Friday", "horas": "09:00 - 12:00 / 15:00 - 18:00" }
+    ],
+    "costos": [
+      { "concepto": "Nationals and Foreigners", "precio": "10 Bs" },
+      { "concepto": "Children", "precio": "5 Bs" }
+    ]
+  },
+  {
+    "id": "museo-militar-de-la-nacion",
+    "nombre": "National Military History Museum",
+    "mapaUrl": "https://maps.google.com/?q=Calle+Ravelo+N1+Sucre",
+    "descripcion": "An exhibition of Bolivia's military history featuring weaponry, uniforms, and documents from the Pacific, Chaco, and Acre conflicts.",
+    "imagen": "./assets/museos/historico-militar.webp",
+    "horarios": [
+      { "dias": "Monday to Friday", "horas": "08:30 - 12:00 / 14:00 - 16:30" }
+    ],
+    "costos": [
+      { "concepto": "Nationals", "precio": "10 Bs" },
+      { "concepto": "Foreigners", "precio": "15 Bs" },
+      { "concepto": "Children", "precio": "5 Bs" }
+    ]
+  },
+  {
+    "id": "museo-historico-policial",
+    "nombre": "Police History Museum",
+    "mapaUrl": "https://maps.google.com/?q=Calle+Olañeta+N42+Sucre",
+    "descripcion": "Traces the evolution of the Bolivian Police Force through artifacts, uniforms, documents, and weapons from pre-Hispanic times to the present day.",
+    "imagen": "./assets/museos/historico-policial.webp",
+    "horarios": [
+      { "dias": "Monday to Friday", "horas": "08:30 - 12:00 / 14:30 - 18:00" }
+    ],
+    "costos": [
+      { "concepto": "General", "precio": "Free admission (for Bicentennial)" }
+    ]
+  }
+]
