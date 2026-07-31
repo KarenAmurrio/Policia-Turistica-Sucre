@@ -1,5 +1,18 @@
 [
   {
+    "id": "museo-historico-policial",
+    "nombre": "Police History Museum",
+    "mapaUrl": "https://maps.app.goo.gl/dgVWuZv7rGdLn2er7",
+    "descripcion": "Traces the evolution of the Bolivian Police Force through artifacts, uniforms, documents, and weapons from pre-Hispanic times to the present day.",
+    "imagen": "./assets/museos/historico-policial.webp",
+    "horarios": [
+      { "dias": "Monday to Friday", "horas": "08:30 - 12:00 / 14:30 - 18:00" }
+    ],
+    "costos": [
+      { "concepto": "General", "precio": "Free admission (for Bicentennial)" }
+    ]
+  },
+  {
     "id": "san-francisco",
     "nombre": "San Francisco de Asís Temple Museum",
     "mapaUrl": "https://maps.google.com/?q=Templo+San+Francisco+Sucre",
@@ -310,19 +323,6 @@
       { "concepto": "Nationals", "precio": "10 Bs" },
       { "concepto": "Foreigners", "precio": "15 Bs" },
       { "concepto": "Children", "precio": "5 Bs" }
-    ]
-  },
-  {
-    "id": "museo-historico-policial",
-    "nombre": "Police History Museum",
-    "mapaUrl": "https://maps.google.com/?q=Calle+Olañeta+N42+Sucre",
-    "descripcion": "Traces the evolution of the Bolivian Police Force through artifacts, uniforms, documents, and weapons from pre-Hispanic times to the present day.",
-    "imagen": "./assets/museos/historico-policial.webp",
-    "horarios": [
-      { "dias": "Monday to Friday", "horas": "08:30 - 12:00 / 14:30 - 18:00" }
-    ],
-    "costos": [
-      { "concepto": "General", "precio": "Free admission (for Bicentennial)" }
     ]
   }
 ]

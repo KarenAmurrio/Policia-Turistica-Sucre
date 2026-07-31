@@ -1,5 +1,18 @@
 [
   {
+    "id": "museo-historico-policial",
+    "nombre": "Museo Histórico Policial",
+    "mapaUrl": "https://maps.app.goo.gl/dgVWuZv7rGdLn2er7",
+    "descripcion": "Muestra la evolución de la Policía Boliviana a través de piezas, uniformes, documentos y armas desde la época prehispánica hasta la actualidad.",
+    "imagen": "./assets/museos/historico-policial.webp",
+    "horarios": [
+      { "dias": "Lunes a Viernes", "horas": "08:30 - 12:00 / 14:30 - 18:00" }
+    ],
+    "costos": [
+      { "concepto": "General", "precio": "Entrada libre (por Bicentenario)" }
+    ]
+  },
+  {
     "id": "san-francisco",
     "nombre": "Templo Museo San Francisco de Asís",
     "mapaUrl": "https://maps.google.com/?q=Templo+San+Francisco+Sucre",
@@ -310,19 +323,6 @@
       { "concepto": "Nacionales", "precio": "10 Bs" },
       { "concepto": "Extranjeros", "precio": "15 Bs" },
       { "concepto": "Niños", "precio": "5 Bs" }
-    ]
-  },
-  {
-    "id": "museo-historico-policial",
-    "nombre": "Museo Histórico Policial",
-    "mapaUrl": "https://maps.google.com/?q=Calle+Olañeta+N42+Sucre",
-    "descripcion": "Muestra la evolución de la Policía Boliviana a través de piezas, uniformes, documentos y armas desde la época prehispánica hasta la actualidad.",
-    "imagen": "./assets/museos/historico-policial.webp",
-    "horarios": [
-      { "dias": "Lunes a Viernes", "horas": "08:30 - 12:00 / 14:30 - 18:00" }
-    ],
-    "costos": [
-      { "concepto": "General", "precio": "Entrada libre (por Bicentenario)" }
     ]
   }
 ]
