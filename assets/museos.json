@@ -38,8 +38,9 @@
       { "dias": "Sábados y Domingos", "horas": "09:00 - 13:00" }
     ],
     "costos": [
-      { "concepto": "Nacionales", "precio": "15 Bs" },
-      { "concepto": "Extranjeros", "precio": "40 Bs" },
+      { "concepto": "Nacionales", "precio": "20 Bs" },
+      { "concepto": "Extranjeros", "precio": "50 Bs" },
+      { "concepto": "Menores de 15 años no pagan", "precio": "" },
       { "concepto": "Permiso para fotos/video", "precio": "10 Bs" }
     ]
   },
