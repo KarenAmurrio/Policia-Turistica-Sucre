@@ -27,243 +27,314 @@
 </head>
 <body class="bg-fondo-suave text-gray-800 min-h-screen flex flex-col items-center pb-8 font-sans antialiased">
 
-    <!-- BARRITA TRICOLOR SUPERIOR -->
-    <div class="h-2 w-full flex">
-        <div class="h-full w-1/3 bg-b-rojo"></div>
-        <div class="h-full w-1/3 bg-b-amarillo"></div>
-        <div class="h-full w-1/3 bg-b-verde"></div>
+<!-- BARRITA TRICOLOR SUPERIOR (SIEMPRE FIJA) -->
+<div class="fixed top-0 left-0 w-full h-1.5 flex z-50">
+    <div class="h-full w-1/3 bg-b-rojo"></div>
+    <div class="h-full w-1/3 bg-b-amarillo"></div>
+    <div class="h-full w-1/3 bg-b-verde"></div>
+</div>
+
+<!-- 1. BARRA FLOTANTE COMPACTA (Oculta al inicio, aparece al scrollear) -->
+<nav id="navbar-sticky" class="fixed top-1.5 left-0 w-full bg-fondo-suave/95 backdrop-blur-md z-40 border-b border-gray-300/80 shadow-md transition-all duration-300 -translate-y-full opacity-0 pointer-events-none">
+    <div class="max-w-md mx-auto px-4 py-2 flex items-center justify-between">
+        
+        <!-- Logo + Título Compacto -->
+        <div class="flex items-center gap-2">
+            <div class="p-1 bg-policia-verde-base rounded-xl shadow-sm border border-policia-dorado/60 shrink-0">
+                <img src="./assets/logo.webp" alt="Logo Policía" class="w-7 h-auto drop-shadow" onerror="this.onerror=null; this.src='https://via.placeholder.com/35x45/1C3A27/ffffff?text=PT';">
+            </div>
+            <div class="text-left">
+                <span class="text-xs font-black text-policia-verde-base leading-none block">Policía Turística</span>
+                <span class="text-[9px] uppercase font-bold text-policia-verde-claro tracking-wider">Sucre, Bolivia</span>
+            </div>
+        </div>
+
+        <!-- Selector en Barra Flotante -->
+        <div class="relative inline-block text-left shrink-0">
+            <button onclick="toggleMenuIdioma('dropdown-sticky', 'arrow-sticky')" type="button" 
+                    class="flex items-center gap-1 px-2.5 py-1.5 bg-white border border-gray-300 hover:border-policia-dorado rounded-xl shadow-sm text-[11px] font-bold text-policia-verde-base active:scale-95 transition-all">
+                <svg class="w-3.5 h-3.5 text-policia-verde-base shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" stroke-width="2"/>
+                    <path stroke-width="2" d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+                <span class="txt-idioma-actual-val">Español</span>
+                <svg class="w-3 h-3 text-gray-500 transition-transform duration-200 arrow-sticky" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+                </svg>
+            </button>
+
+            <!-- Dropdown Flotante -->
+            <div id="dropdown-sticky" class="hidden absolute right-0 mt-1.5 w-32 bg-white rounded-xl shadow-xl border border-gray-200 py-1 z-50">
+                <button onclick="seleccionarIdioma('es')" class="w-full flex items-center justify-between px-3 py-2 text-xs font-semibold text-gray-700 hover:bg-policia-verde-base/10 transition-colors">
+                    <span class="flex items-center gap-2"><span>🇪🇸</span> Español</span>
+                    <span class="check-es-val text-policia-verde-base font-black text-xs">✓</span>
+                </button>
+                <button onclick="seleccionarIdioma('en')" class="w-full flex items-center justify-between px-3 py-2 text-xs font-semibold text-gray-700 hover:bg-policia-verde-base/10 transition-colors">
+                    <span class="flex items-center gap-2"><span>🇬🇧</span> English</span>
+                    <span class="check-en-val hidden text-policia-verde-base font-black text-xs">✓</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+<!-- 2. ENCABEZADO PRINCIPAL (Diseño completo inicial) -->
+<header id="header-principal" class="w-full max-w-md flex flex-col items-center text-center pt-4 px-4 mb-3 relative">
+    
+    <!-- Selector Superior Inicial -->
+    <div class="w-full flex justify-end mb-1">
+        <div class="relative inline-block text-left">
+            <button onclick="toggleMenuIdioma('dropdown-header', 'arrow-header')" type="button" 
+                    class="flex items-center gap-1.5 px-3 py-1.5 bg-white/95 backdrop-blur-sm border border-gray-300 hover:border-policia-dorado rounded-xl shadow-sm text-xs font-bold text-policia-verde-base active:scale-95 transition-all">
+                <svg class="w-4 h-4 text-policia-verde-base shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" stroke-width="2"/>
+                    <path stroke-width="2" d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+                <span class="txt-idioma-actual-val">Español</span>
+                <svg class="w-3 h-3 text-gray-500 transition-transform duration-200 arrow-header" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+                </svg>
+            </button>
+
+            <!-- Dropdown Inicial -->
+            <div id="dropdown-header" class="hidden absolute right-0 mt-1.5 w-36 bg-white rounded-xl shadow-xl border border-gray-200 py-1 z-50">
+                <button onclick="seleccionarIdioma('es')" class="w-full flex items-center justify-between px-3 py-2 text-xs font-semibold text-gray-700 hover:bg-policia-verde-base/10 transition-colors">
+                    <span class="flex items-center gap-2"><span>🇪🇸</span> Español</span>
+                    <span class="check-es-val text-policia-verde-base font-black text-xs">✓</span>
+                </button>
+                <button onclick="seleccionarIdioma('en')" class="w-full flex items-center justify-between px-3 py-2 text-xs font-semibold text-gray-700 hover:bg-policia-verde-base/10 transition-colors">
+                    <span class="flex items-center gap-2"><span>🇬🇧</span> English</span>
+                    <span class="check-en-val hidden text-policia-verde-base font-black text-xs">✓</span>
+                </button>
+            </div>
+        </div>
     </div>
 
-    <!-- Encabezado -->
-    <header class="w-full max-w-md flex flex-col items-center text-center pt-3 px-4 mb-3">
+    <!-- Logo Principal Centrado -->
+    <div class="p-2.5 bg-policia-verde-base rounded-2xl shadow-md mb-2 border border-policia-dorado/60">
+        <img src="./assets/logo.webp" alt="Escudo Policía Turística" class="w-16 sm:w-20 h-auto drop-shadow hover:scale-105 transition-transform" onerror="this.onerror=null; this.src='https://via.placeholder.com/90x110/1C3A27/ffffff?text=POLICIA';">
+    </div>
+    
+    <h1 class="text-xl sm:text-2xl font-black text-policia-verde-base tracking-wide">@PoliciaTuristica</h1>
+    <p id="txt-subtitulo-header" class="text-[11px] uppercase font-extrabold text-policia-verde-claro tracking-widest mt-0.5">Policía Boliviana • Sucre, Bolivia</p>
+    
+    <!-- CARRUSEL DE IMÁGENES -->
+    <div class="relative w-full h-40 sm:h-44 my-3 rounded-2xl overflow-hidden shadow-lg border-2 border-policia-verde-base group">
+        <div class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-100">
+            <img src="./assets/carrusel1.jpg" alt="Slide 1" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-3">
+                <p id="txt-slide-1" class="text-xs font-bold text-white drop-shadow">Patrullaje Preventivo en el Centro Histórico</p>
+            </div>
+        </div>
+        <div class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0">
+            <img src="./assets/carrusel2.jpg" alt="Slide 2" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-3">
+                <p id="txt-slide-2" class="text-xs font-bold text-white drop-shadow">Orientación y Asistencia Personalizada</p>
+            </div>
+        </div>
+        <div class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0">
+            <img src="./assets/carrusel3.jpg" alt="Slide 3" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-3">
+                <p id="txt-slide-3" class="text-xs font-bold text-white drop-shadow">Seguridad en Circuitos Turísticos y Museos</p>
+            </div>
+        </div>
+
+        <!-- Indicadores -->
+        <div class="absolute bottom-2 right-3 z-10 flex space-x-1.5">
+            <button onclick="setSlide(0)" class="carousel-dot w-2 h-2 rounded-full bg-policia-dorado opacity-100 transition-all"></button>
+            <button onclick="setSlide(1)" class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50 transition-all"></button>
+            <button onclick="setSlide(2)" class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50 transition-all"></button>
+        </div>
+    </div>
+
+    <!-- TARJETA INSTITUCIONAL -->
+    <div class="bg-policia-verde-base text-white border-b-4 border-policia-dorado shadow-md rounded-2xl p-3.5 space-y-2 text-center text-xs leading-relaxed">
+        <p id="txt-institucional" class="text-gray-100 font-medium"></p>
+    </div>
+
+</header>
+
+    <!-- Botones Principales -->
+   <!-- Botones Principales en Grid de 2 Columnas -->
+<main class="w-full max-w-md px-4 space-y-4 flex-grow">
+
+    <!-- GRID 2 COLUMNAS (Tarjetas Cuadradas) -->
+    <div class="grid grid-cols-2 gap-3.5">
+
+        <!-- 1. TARJETA GUÍA DE SEGURIDAD -->
+        <div onclick="openModal('modal-guia')" 
+             class="group relative bg-white border border-gray-200/90 rounded-3xl p-4 shadow-sm hover:shadow-md active:scale-95 transition-all duration-200 cursor-pointer flex flex-col justify-between items-center text-center aspect-square border-b-4 border-b-policia-verde-base hover:border-policia-dorado">
+            
+            <!-- Icono con Fondo Redondeado -->
+            <div class="p-3 bg-policia-verde-base/10 text-policia-verde-base rounded-2xl group-hover:bg-policia-verde-base group-hover:text-amber-300 transition-colors">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+            </div>
+
+            <!-- Textos -->
+            <div class="space-y-0.5 my-auto">
+                <h2 id="txt-btn-guia-titulo" class="font-black text-xs sm:text-sm text-policia-verde-base group-hover:text-policia-verde-claro leading-tight uppercase">
+                    GUÍA DE SEGURIDAD
+                </h2>
+                <p id="txt-btn-guia-sub" class="text-[9.5px] text-gray-500 font-medium leading-tight line-clamp-2">
+                    Toca para abrir afiche
+                </p>
+            </div>
+
+            <!-- Mini Botón / Badge de Acción -->
+            <span id="txt-btn-guia-accion" class="w-full py-1.5 bg-policia-dorado text-policia-verde-base font-black text-[10px] rounded-xl uppercase tracking-wider group-hover:bg-amber-400 transition-colors">
+                Ver Guía
+            </span>
+        </div>
+
+        <!-- 2. TARJETA INFORMACIÓN DE MUSEOS -->
+        <div onclick="openModal('modal-museos')" 
+             class="group relative bg-white border border-gray-200/90 rounded-3xl p-4 shadow-sm hover:shadow-md active:scale-95 transition-all duration-200 cursor-pointer flex flex-col justify-between items-center text-center aspect-square border-b-4 border-b-policia-verde-base hover:border-policia-dorado">
+            
+            <!-- Icono con Fondo Redondeado -->
+            <div class="p-3 bg-policia-verde-base/10 text-policia-verde-base rounded-2xl group-hover:bg-policia-verde-base group-hover:text-amber-300 transition-colors">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/>
+                </svg>
+            </div>
+
+            <!-- Textos -->
+            <div class="space-y-0.5 my-auto">
+                <h2 id="txt-btn-museos-titulo" class="font-black text-xs sm:text-sm text-policia-verde-base group-hover:text-policia-verde-claro leading-tight uppercase">
+                    INFORMACIÓN DE MUSEOS
+                </h2>
+                <p id="txt-btn-museos-sub" class="text-[9.5px] text-gray-500 font-medium leading-tight line-clamp-2">
+                    Horarios y costos
+                </p>
+            </div>
+
+            <!-- Mini Botón / Badge de Acción -->
+            <span id="txt-btn-museos-accion" class="w-full py-1.5 bg-policia-dorado text-policia-verde-base font-black text-[10px] rounded-xl uppercase tracking-wider group-hover:bg-amber-400 transition-colors">
+                Ver Museos
+            </span>
+        </div>
+
+    </div>
+
+    <!-- Teléfonos de Emergencia (Se mantiene debajo con buen espaciado) -->
+    <div class="pt-2 space-y-2">
+        <div class="flex items-center justify-between pl-1">
+            <h3 id="txt-emergencias-titulo" class="text-xs font-black text-policia-verde-base uppercase tracking-widest">Teléfonos de Emergencias</h3>
+            <span class="text-[10px] bg-b-rojo text-white font-bold px-2 py-0.5 rounded-md uppercase animate-pulse">24 / 7</span>
+        </div>
         
-        <!-- Logo Principal (Compacto) -->
-        <div class="p-2 bg-policia-verde-base rounded-2xl shadow-md mb-2 border border-policia-dorado/60">
-            <img src="./assets/logo.webp" alt="Escudo Policía Turística" class="w-16 sm:w-18 h-auto drop-shadow hover:scale-105 transition-transform" onerror="this.onerror=null; this.src='https://via.placeholder.com/90x110/1C3A27/ffffff?text=POLICIA';">
+        <div class="grid grid-cols-1 gap-2">
+            <a href="tel:64650265" class="flex items-center justify-between p-3 bg-policia-verde-base text-white border-l-4 border-policia-dorado rounded-xl font-bold text-xs hover:bg-policia-verde-card shadow-md transition-all active:scale-[0.98]">
+                <span class="flex items-center gap-2">👮‍♂️ <span id="txt-policia-turistica">Policía Turística</span></span>
+                <span class="text-policia-dorado font-mono text-sm font-black">64650265</span>
+            </a>
+            <a href="tel:72883777" class="flex items-center justify-between p-3 bg-white border border-gray-300 rounded-xl font-bold text-gray-800 text-xs hover:border-policia-verde-base shadow-sm transition-all active:scale-[0.98]">
+                <span class="flex items-center gap-2 text-policia-verde-base">🚨 <span class="txt-radio-patrullas">Radio Patrullas 110</span></span>
+                <span class="font-mono text-b-rojo text-sm font-black">72883777</span>
+            </a>
+            <a href="tel:63376000" class="flex items-center justify-between p-3 bg-white border border-gray-300 rounded-xl font-bold text-gray-800 text-xs hover:border-policia-verde-base shadow-sm transition-all active:scale-[0.98]">
+                <span class="flex items-center gap-2 text-policia-verde-base">🚨 <span class="txt-radio-patrullas">Radio Patrullas 110</span></span>
+                <span class="font-mono text-b-rojo text-sm font-black">63376000</span>
+            </a>
+            <a href="tel:63932000" class="flex items-center justify-between p-3 bg-white border border-gray-300 rounded-xl font-bold text-gray-800 text-xs hover:border-policia-verde-base shadow-sm transition-all active:scale-[0.98]">
+                <span class="flex items-center gap-2 text-policia-verde-base">🚨 <span class="txt-radio-patrullas">Radio Patrullas 110</span></span>
+                <span class="font-mono text-b-rojo text-sm font-black">63932000</span>
+            </a>
+            <a href="tel:63325000" class="flex items-center justify-between p-3 bg-white border border-gray-300 rounded-xl font-bold text-gray-800 text-xs hover:border-policia-verde-base shadow-sm transition-all active:scale-[0.98]">
+                <span class="flex items-center gap-2 text-policia-verde-base">🚨 <span class="txt-radio-patrullas">Radio Patrullas 110</span></span>
+                <span class="font-mono text-b-rojo text-sm font-black">63325000</span>
+            </a>
         </div>
+    </div>
+
+<!-- SECCIÓN: OFICINA / UBICACIÓN INTERACTIVA -->
+<div class="space-y-2 pt-2">
+    <div class="flex items-center gap-1.5 pl-1">
+        <svg class="w-4 h-4 text-policia-verde-base" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+        <h3 id="txt-oficina-titulo" class="text-xs font-black text-policia-verde-base uppercase tracking-widest">
+            Atención Presencial e Información
+        </h3>
+    </div>
+
+    <!-- TARJETA CON MAPA EMBEBIDO -->
+    <div class="bg-white border border-gray-200/90 rounded-3xl p-3.5 shadow-sm space-y-3 overflow-hidden">
         
-        <h1 class="text-xl sm:text-2xl font-black text-policia-verde-base tracking-wide">@PoliciaTuristica</h1>
-        <p class="text-[11px] uppercase font-extrabold text-policia-verde-claro tracking-widest mt-0.5">Policía Boliviana • Sucre, Bolivia</p>
-        
-        <!-- ================= CARRUSEL DE 3 IMÁGENES ================= -->
-        <div class="relative w-full h-40 sm:h-44 my-3 rounded-2xl overflow-hidden shadow-lg border-2 border-policia-verde-base group">
-            
-            <!-- Slide 1 -->
-            <div class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-100">
-                <img src="./assets/carrusel1.jpg" alt="Patrullaje Preventivo" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-3">
-                    <p class="text-xs font-bold text-white drop-shadow">Patrullaje Preventivo en el Centro Histórico</p>
-                </div>
+        <!-- Datos de la Oficina -->
+        <div class="flex items-start gap-3 px-1 pt-1">
+            <div class="p-2.5 bg-policia-verde-base/10 text-policia-verde-base rounded-2xl shrink-0 mt-0.5">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                </svg>
             </div>
-
-            <!-- Slide 2 -->
-            <div class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0">
-                <img src="./assets/carrusel2.jpg" alt="Asistencia al Turista" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-3">
-                    <p class="text-xs font-bold text-white drop-shadow">Orientación y Asistencia Personalizada</p>
-                </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0">
-                <img src="./assets/carrusel3.jpg" alt="Resguardo de Museos" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-3">
-                    <p class="text-xs font-bold text-white drop-shadow">Seguridad en Circuitos Turísticos y Museos</p>
-                </div>
-            </div>
-
-            <!-- Indicadores (Puntos) -->
-            <div class="absolute bottom-2 right-3 z-10 flex space-x-1.5">
-                <button onclick="setSlide(0)" class="carousel-dot w-2 h-2 rounded-full bg-policia-dorado opacity-100 transition-all"></button>
-                <button onclick="setSlide(1)" class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50 transition-all"></button>
-                <button onclick="setSlide(2)" class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50 transition-all"></button>
+            <div class="space-y-0.5 text-left">
+                <h4 id="txt-oficina-nombre" class="font-extrabold text-xs sm:text-sm text-policia-verde-base leading-tight">
+                    Oficina Central - Policía Turística
+                </h4>
+                <p id="txt-oficina-direccion" class="text-[11px] text-gray-700 font-semibold leading-snug">
+                    Al lado de Fundación Pachamama
+                </p>
+                <p id="txt-oficina-horario" class="text-[10px] text-gray-500 font-medium">
+                    Atención y Orientación al Turista • Sucre, Bolivia
+                </p>
             </div>
         </div>
 
-        <!-- TARJETA DE DESCRIPCIÓN INSTITUCIONAL -->
-        <div class="bg-policia-verde-base text-white border-b-4 border-policia-dorado shadow-md rounded-2xl p-3.5 space-y-2.5 text-center text-xs leading-relaxed">
-            <p class="text-gray-100 font-medium">
-                La <strong class="text-policia-dorado font-extrabold">Policía Turística</strong>, dependiente del Comando Departamental de Policía de Chuquisaca, tiene como función principal brindar protección, orientación y auxilio oportuno a turistas nacionales y extranjeros. Asimismo, desempeña un rol fundamental en la preservación y resguardo del patrimonio histórico y cultural de la ciudad de Sucre.
-            </p>
-            
-            <div class="w-12 h-0.5 bg-policia-dorado/50 mx-auto"></div>
-            
-            <p class="text-gray-300 italic">
-                The <strong class="text-policia-dorado font-bold not-italic">Tourist Police</strong>, operating under the Departmental Police Command of Chuquisaca, is responsible for providing protection, guidance, and assistance to domestic and international visitors, while safeguarding the historical and cultural heritage of Sucre.
-            </p>
+        <!-- RECUADRO INTERACTIVO GOOGLE MAPS -->
+        <div class="w-full h-44 sm:h-48 rounded-2xl overflow-hidden shadow-inner border border-gray-300 relative bg-gray-100">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d235.72075997862532!2d-65.2674618!3d-19.0403263!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93fbc929b37b474b%3A0x7721d168547d9eca!2sCentro%20Cultural%20de%20la%20Prensa!5e0!3m2!1ses-419!2sbo!4v1787252820593!5m2!1ses-419!2sbo"   
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                class="w-full h-full">
+            </iframe>
         </div>
 
-    </header>
+        <!-- BOTÓN CÓMO LLEGAR -->
+        <a href="https://maps.app.goo.gl/FXa4mH6VRRJ5Usdb8?g_st=ic" target="_blank" rel="noopener noreferrer" 
+           class="w-full py-2.5 px-4 bg-policia-verde-base hover:bg-policia-verde-card text-amber-300 font-extrabold text-xs rounded-2xl shadow flex items-center justify-center gap-2 transition-all active:scale-95 border border-amber-300/30">
+            <svg class="w-4 h-4 fill-current text-amber-300 shrink-0" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            <span id="txt-oficina-btn">Abrir en Google Maps</span>
+        </a>
 
-    <!-- Botones Principales Agrupados por Idioma -->
-    <main class="w-full max-w-md px-4 space-y-5 flex-grow">
+    </div>
+</div>
 
-        <!-- ================= SECCIÓN ESPAÑOL ================= -->
-        <div class="space-y-2.5">
-            <!-- Encabezado de Idioma (Más grande y visible) -->
-            <div class="flex items-center gap-2.5 pl-1 border-b border-gray-300 pb-1.5">
-                <img src="./assets/flag-bo.svg" alt="Bolivia" class="w-6 h-4 object-cover rounded shadow-sm" onerror="this.onerror=null; this.src='https://flagcdn.com/w40/bo.png';">
-                <h3 class="text-sm sm:text-base font-extrabold text-policia-verde-base tracking-wide uppercase">Información en Español</h3>
-            </div>
+</main>
 
-            <!-- GUÍA DE SEGURIDAD (ES) -->
-            <div onclick="openModal('modal-es')" class="group bg-white border-l-4 border-l-policia-verde-base border-y border-r border-gray-300 rounded-2xl p-3.5 shadow-md flex items-center justify-between cursor-pointer hover:border-policia-dorado hover:shadow-lg active:scale-[0.98] transition-all duration-200">
-                <div class="flex items-center space-x-3">
-                    <div class="p-2 bg-policia-verde-base/10 rounded-xl flex items-center justify-center">
-                        <img src="./assets/icon-shield.svg" alt="Icono Escudo" class="w-6 h-6 object-contain" onerror="this.onerror=null; this.src='https://api.iconify.design/lucide:shield-check.svg?color=%231c3a27';">
-                    </div>
-                    <div>
-                        <h2 class="font-black text-sm sm:text-base text-policia-verde-base group-hover:text-policia-verde-claro transition-colors leading-tight">GUÍA DE SEGURIDAD</h2>
-                        <p class="text-[10px] text-gray-600 font-semibold">Toca para abrir afiche completo</p>
-                    </div>
-                </div>
-                <div class="px-3.5 py-2 bg-policia-dorado text-policia-verde-base font-black text-xs rounded-xl shadow-md uppercase tracking-wider group-hover:bg-amber-400 transition-colors pointer-events-none">
-                    Ver
-                </div>
-            </div>
-
-            <!-- INFORMACIÓN DE MUSEOS (ES) -->
-            <div onclick="openModal('modal-museos')" class="group bg-white border-l-4 border-l-policia-verde-base border-y border-r border-gray-300 rounded-2xl p-3.5 shadow-md flex items-center justify-between cursor-pointer hover:border-policia-dorado hover:shadow-lg active:scale-[0.98] transition-all duration-200">
-                <div class="flex items-center space-x-3">
-                    <div class="p-2 bg-policia-verde-base/10 rounded-xl flex items-center justify-center">
-                        <img src="./assets/icon-museum.svg" alt="Icono Museo" class="w-6 h-6 object-contain" onerror="this.onerror=null; this.src='https://api.iconify.design/lucide:landmark.svg?color=%231c3a27';">
-                    </div>
-                    <div>
-                        <h2 class="font-black text-sm sm:text-base text-policia-verde-base group-hover:text-policia-verde-claro transition-colors leading-tight">INFORMACIÓN DE MUSEOS</h2>
-                        <p class="text-[10px] text-gray-600 font-semibold">Horarios y circuitos culturales</p>
-                    </div>
-                </div>
-                <div class="px-3.5 py-2 bg-policia-dorado text-policia-verde-base font-black text-xs rounded-xl shadow-md uppercase tracking-wider group-hover:bg-amber-400 transition-colors pointer-events-none">
-                    Ver
-                </div>
-            </div>
-        </div>
-
-        <!-- ================= ENGLISH SECTION ================= -->
-        <div class="space-y-2.5 pt-1">
-            <!-- Encabezado de Idioma (Más grande y visible) -->
-            <div class="flex items-center gap-2.5 pl-1 border-b border-gray-300 pb-1.5">
-                <img src="./assets/flag-en.svg" alt="UK/USA" class="w-6 h-4 object-cover rounded shadow-sm" onerror="this.onerror=null; this.src='https://flagcdn.com/w40/gb.png';">
-                <h3 class="text-sm sm:text-base font-extrabold text-policia-verde-base tracking-wide uppercase">English Information</h3>
-            </div>
-
-            <!-- SAFETY GUIDE (EN) -->
-            <div onclick="openModal('modal-en')" class="group bg-white border-l-4 border-l-policia-verde-base border-y border-r border-gray-300 rounded-2xl p-3.5 shadow-md flex items-center justify-between cursor-pointer hover:border-policia-dorado hover:shadow-lg active:scale-[0.98] transition-all duration-200">
-                <div class="flex items-center space-x-3">
-                    <div class="p-2 bg-policia-verde-base/10 rounded-xl flex items-center justify-center">
-                        <img src="./assets/icon-shield.svg" alt="Icon Shield" class="w-6 h-6 object-contain" onerror="this.onerror=null; this.src='https://api.iconify.design/lucide:shield-check.svg?color=%231c3a27';">
-                    </div>
-                    <div>
-                        <h2 class="font-black text-sm sm:text-base text-policia-verde-base group-hover:text-policia-verde-claro transition-colors leading-tight">SAFETY GUIDE</h2>
-                        <p class="text-[10px] text-gray-600 font-semibold">Click to view full flyer</p>
-                    </div>
-                </div>
-                <div class="px-3.5 py-2 bg-policia-dorado text-policia-verde-base font-black text-xs rounded-xl shadow-md uppercase tracking-wider group-hover:bg-amber-400 transition-colors pointer-events-none">
-                    View
-                </div>
-            </div>
-
-            <!-- MUSEUM INFORMATION (EN) -->
-            <div onclick="openModal('modal-museums')" class="group bg-white border-l-4 border-l-policia-verde-base border-y border-r border-gray-300 rounded-2xl p-3.5 shadow-md flex items-center justify-between cursor-pointer hover:border-policia-dorado hover:shadow-lg active:scale-[0.98] transition-all duration-200">
-                <div class="flex items-center space-x-3">
-                    <div class="p-2 bg-policia-verde-base/10 rounded-xl flex items-center justify-center">
-                        <img src="./assets/icon-museum.svg" alt="Icon Museum" class="w-6 h-6 object-contain" onerror="this.onerror=null; this.src='https://api.iconify.design/lucide:landmark.svg?color=%231c3a27';">
-                    </div>
-                    <div>
-                        <h2 class="font-black text-sm sm:text-base text-policia-verde-base group-hover:text-policia-verde-claro transition-colors leading-tight">MUSEUM INFORMATION</h2>
-                        <p class="text-[10px] text-gray-600 font-semibold">Hours and cultural circuits</p>
-                    </div>
-                </div>
-                <div class="px-3.5 py-2 bg-policia-dorado text-policia-verde-base font-black text-xs rounded-xl shadow-md uppercase tracking-wider group-hover:bg-amber-400 transition-colors pointer-events-none">
-                    View
-                </div>
-            </div>
-        </div>
-
-        <!-- Teléfonos de Emergencia -->
-        <div class="pt-3 space-y-2">
-            <div class="flex items-center justify-between pl-1">
-                <h3 class="text-xs font-black text-policia-verde-base uppercase tracking-widest"> Teléfonos de Emergencias</h3>
-                <span class="text-[10px] bg-b-rojo text-white font-bold px-2 py-0.5 rounded-md uppercase animate-pulse">24 / 7</span>
-            </div>
-            
-            <div class="grid grid-cols-1 gap-2">
-                <a href="tel:64650265" class="flex items-center justify-between p-3 bg-policia-verde-base text-white border-l-4 border-policia-dorado rounded-xl font-bold text-xs hover:bg-policia-verde-card shadow-md transition-all">
-                    <span class="flex items-center gap-2">👮‍♂️ Policía Turística</span>
-                    <span class="text-policia-dorado font-mono text-sm font-black">64650265</span>
-                </a>
-                <a href="tel:72883777" class="flex items-center justify-between p-3 bg-white border border-gray-300 rounded-xl font-bold text-gray-800 text-xs hover:border-policia-verde-base shadow-sm transition-all">
-                    <span class="flex items-center gap-2 text-policia-verde-base">🚨 Radio Patrullas 110</span>
-                    <span class="font-mono text-b-rojo text-sm font-black">72883777</span>
-                </a>
-                <a href="tel:63376000" class="flex items-center justify-between p-3 bg-white border border-gray-300 rounded-xl font-bold text-gray-800 text-xs hover:border-policia-verde-base shadow-sm transition-all">
-                    <span class="flex items-center gap-2 text-policia-verde-base">🚨 Radio Patrullas 110</span>
-                    <span class="font-mono text-b-rojo text-sm font-black">63376000</span>
-                </a>
-                <a href="tel:63932000" class="flex items-center justify-between p-3 bg-white border border-gray-300 rounded-xl font-bold text-gray-800 text-xs hover:border-policia-verde-base shadow-sm transition-all">
-                    <span class="flex items-center gap-2 text-policia-verde-base">🚨 Radio Patrullas 110</span>
-                    <span class="font-mono text-b-rojo text-sm font-black">63932000</span>
-                </a>
-                <a href="tel:63325000" class="flex items-center justify-between p-3 bg-white border border-gray-300 rounded-xl font-bold text-gray-800 text-xs hover:border-policia-verde-base shadow-sm transition-all">
-                    <span class="flex items-center gap-2 text-policia-verde-base">🚨 Radio Patrullas 110</span>
-                    <span class="font-mono text-b-rojo text-sm font-black">63325000</span>
-                </a>
-            </div>
-        </div>
-
-    </main>
-
-    <!-- ================= MODAL ESPAÑOL ================= -->
-    <div id="modal-es" class="modal-container fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-2 sm:p-4 transition-all">
+    <!-- ================= MODAL GUÍA DE SEGURIDAD ================= -->
+    <div id="modal-guia" class="modal-container fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-2 sm:p-4 transition-all">
         <div class="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl border border-gray-300 max-h-[90dvh] flex flex-col overflow-hidden my-auto">
-            <button onclick="closeModal('modal-es')" aria-label="Cerrar" class="absolute top-3 right-3 z-30 bg-b-rojo hover:bg-red-700 text-white rounded-full p-2.5 transition-transform active:scale-95 shadow-md flex items-center justify-center">
+            <button onclick="closeModal('modal-guia')" aria-label="Cerrar" class="absolute top-3 right-3 z-30 bg-b-rojo hover:bg-red-700 text-white rounded-full p-2.5 transition-transform active:scale-95 shadow-md flex items-center justify-center">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
             <div class="p-4 pt-5 pb-3 text-center border-b border-gray-200 bg-policia-verde-base text-white pr-12">
-                <h2 class="text-lg sm:text-xl font-extrabold text-policia-dorado tracking-wide uppercase leading-tight">Guía de Seguridad Turística</h2>
-                <p class="text-xs text-gray-200 font-medium mt-0.5">Policía Boliviana • Sucre</p>
+                <h2 id="txt-modal-guia-titulo" class="text-lg sm:text-xl font-extrabold text-policia-dorado tracking-wide uppercase leading-tight">Guía de Seguridad Turística</h2>
+                <p id="txt-modal-guia-sub" class="text-xs text-gray-200 font-medium mt-0.5">Policía Boliviana • Sucre</p>
             </div>
             <div class="flex-1 overflow-y-auto p-4 pb-24 overscroll-contain -webkit-overflow-scrolling-touch">
                 <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-gray-50 w-full">
-                    <img src="./assets/GuiaSeguridad.webp" alt="Guía de Seguridad" class="w-full h-auto block object-contain">
+                    <img id="img-modal-guia" src="./assets/GuiaSeguridad.webp" alt="Guía de Seguridad" class="w-full h-auto block object-contain">
                 </div>
             </div>
             <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-white via-white/95 to-transparent flex justify-center z-20 pt-6">
-                <a href="./assets/GuiaSeguridad.pdf" download="Guia_Seguridad_Turistica_Sucre.pdf" class="w-full py-3.5 px-4 bg-policia-verde-base hover:bg-policia-verde-card text-white font-black text-xs sm:text-sm rounded-2xl shadow-lg flex items-center justify-center gap-2 transition-transform active:scale-95 uppercase tracking-wider border border-policia-dorado/40">
+                <a id="link-modal-guia-pdf" href="./assets/GuiaSeguridad.pdf" download="Guia_Seguridad_Turistica_Sucre.pdf" class="w-full py-3.5 px-4 bg-policia-verde-base hover:bg-policia-verde-card text-white font-black text-xs sm:text-sm rounded-2xl shadow-lg flex items-center justify-center gap-2 transition-transform active:scale-95 uppercase tracking-wider border border-policia-dorado/40">
                     <svg class="w-5 h-5 text-policia-dorado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                     </svg>
-                    DESCARGAR GUÍA EN PDF
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- ================= MODAL INGLÉS ================= -->
-    <div id="modal-en" class="modal-container fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-2 sm:p-4 transition-all">
-        <div class="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl border border-gray-300 max-h-[90dvh] flex flex-col overflow-hidden my-auto">
-            <button onclick="closeModal('modal-en')" aria-label="Close" class="absolute top-3 right-3 z-30 bg-b-rojo hover:bg-red-700 text-white rounded-full p-2.5 transition-transform active:scale-95 shadow-md flex items-center justify-center">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
-            <div class="p-4 pt-5 pb-3 text-center border-b border-gray-200 bg-policia-verde-base text-white pr-12">
-                <h2 class="text-lg sm:text-xl font-extrabold text-policia-dorado tracking-wide uppercase leading-tight">Tourist Safety Guide</h2>
-                <p class="text-xs text-gray-200 font-medium mt-0.5">Bolivian Police • Sucre</p>
-            </div>
-            <div class="flex-1 overflow-y-auto p-4 pb-24 overscroll-contain -webkit-overflow-scrolling-touch">
-                <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-gray-50 w-full">
-                    <img src="./assets/SecurityGuide.webp" alt="Safety Guide" class="w-full h-auto block object-contain">
-                </div>
-            </div>
-            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-white via-white/95 to-transparent flex justify-center z-20 pt-6">
-                <a href="./assets/SecurityGuide.pdf" download="Tourist_Safety_Guide_Sucre.pdf" class="w-full py-3.5 px-4 bg-policia-verde-base hover:bg-policia-verde-card text-white font-black text-xs sm:text-sm rounded-2xl shadow-lg flex items-center justify-center gap-2 transition-transform active:scale-95 uppercase tracking-wider border border-policia-dorado/40">
-                    <svg class="w-5 h-5 text-policia-dorado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                    </svg>
-                    DOWNLOAD PDF GUIDE
+                    <span id="txt-modal-guia-btn">DESCARGAR GUÍA EN PDF</span>
                 </a>
             </div>
         </div>
@@ -278,7 +349,7 @@
                 </svg>
             </button>
             <div class="p-4 pt-5 pb-3 text-center border-b border-gray-200 bg-policia-verde-base text-white pr-12">
-                <h2 class="text-lg sm:text-xl font-extrabold text-policia-dorado tracking-wide uppercase leading-tight">Información de Museos</h2>
+                <h2 id="txt-modal-museos-titulo" class="text-lg sm:text-xl font-extrabold text-policia-dorado tracking-wide uppercase leading-tight">Información de Museos</h2>
                 <p class="text-xs text-gray-200 font-medium mt-0.5">Sucre, Bolivia</p>
             </div>
             <div id="lista-museos" class="flex-1 overflow-y-auto p-4 space-y-4 pb-24 overscroll-contain -webkit-overflow-scrolling-touch text-gray-800">
@@ -289,96 +360,13 @@
                     <svg class="w-5 h-5 text-policia-dorado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                     </svg>
-                    DESCARGAR GUÍA EN PDF
+                    <span id="txt-modal-museos-btn">DESCARGAR GUÍA EN PDF</span>
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- ================= MODAL MUSEOS INGLES ================= -->
-    <div id="modal-museums" class="modal-container fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-2 sm:p-4 transition-all">
-        <div class="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl border border-gray-300 max-h-[90dvh] flex flex-col overflow-hidden my-auto">
-            <button onclick="closeModal('modal-museums')" aria-label="Cerrar" class="absolute top-3 right-3 z-30 bg-b-rojo hover:bg-red-700 text-white rounded-full p-2.5 transition-transform active:scale-95 shadow-md flex items-center justify-center">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
-            <div class="p-4 pt-5 pb-3 text-center border-b border-gray-200 bg-policia-verde-base text-white pr-12">
-                <h2 class="text-lg sm:text-xl font-extrabold text-policia-dorado tracking-wide uppercase leading-tight">Museum Information</h2>
-                <p class="text-xs text-gray-200 font-medium mt-0.5">Sucre, Bolivia</p>
-            </div>
-            <div id="list-museums" class="flex-1 overflow-y-auto p-4 space-y-4 pb-24 overscroll-contain -webkit-overflow-scrolling-touch text-gray-800">
-                <!-- JS inyectará las tarjetas aquí -->
-            </div>
-            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-white via-white/95 to-transparent flex justify-center z-20 pt-6">
-                <a href="./assets/InformacionMuseos.pdf" download class="w-full py-3.5 px-4 bg-policia-verde-base hover:bg-policia-verde-card text-white font-black text-xs sm:text-sm rounded-2xl shadow-lg flex items-center justify-center gap-2 transition-transform active:scale-95 uppercase tracking-wider border border-policia-dorado/40">
-                    <svg class="w-5 h-5 text-policia-dorado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                    </svg>
-                    DOWNLOAD GUIDE IN PDF
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Scripts de Modales y Carrusel -->
-    <script>
-        // --- LÓGICA DEL CARRUSEL ---
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const dots = document.querySelectorAll('.carousel-dot');
-
-        function setSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('opacity-100', i === index);
-                slide.classList.toggle('opacity-0', i !== index);
-            });
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('bg-policia-dorado', i === index);
-                dot.classList.toggle('opacity-100', i === index);
-                dot.classList.toggle('bg-white', i !== index);
-                dot.classList.toggle('opacity-50', i !== index);
-            });
-            currentSlide = index;
-        }
-
-        setInterval(() => {
-            let nextSlide = (currentSlide + 1) % slides.length;
-            setSlide(nextSlide);
-        }, 4000);
-
-        // --- LÓGICA DE MODALES DE HISTORIAL ---
-        function openModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (!modal) return;
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-            history.pushState({ modalOpen: modalId }, '', '#' + modalId);
-        }
-
-        function closeModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (!modal) return;
-            modal.classList.remove('flex');
-            modal.classList.add('hidden');
-            document.body.style.overflow = 'auto';
-            if (window.location.hash === '#' + modalId) {
-                history.back();
-            }
-        }
-
-        window.addEventListener('popstate', function(event) {
-            const modales = document.querySelectorAll('.modal-container');
-            modales.forEach(modal => {
-                modal.classList.remove('flex');
-                modal.classList.add('hidden');
-            });
-            document.body.style.overflow = 'auto';
-        });
-    </script>
-
-    <script src="./js/museos.js"></script>
-    <script src="./js/museums.js"></script>
+    <!-- Script único -->
+    <script src="./js/app.js"></script>
 </body>
 </html>
