@@ -36,11 +36,12 @@ const traducciones = {
         costos: "Costos",
         errorCarga: "Error al cargar la información de museos.",
         oficinaTitulo: "Atención Presencial e Información",
+// En traducciones.es:
 oficinaTitulo: "Atención Presencial e Información",
-oficinaNombre: "Oficina de la Policía Turística",
-oficinaDireccion: "Plaza 25 de Mayo N° 10 (Gobernación de Chuquisaca)",
+oficinaNombre: "Oficina Central - Policía Turística",
+oficinaDireccion: "Al lado de Fundación Pachamama",
 oficinaHorario: "Atención y Orientación al Turista • Sucre, Bolivia",
-oficinaBtn: "Abrir en Google Maps",
+oficinaBtn: "Abrir en Google Maps"
     },
     en: {
         subtituloHeader: "Bolivian Police • Sucre, Bolivia",
@@ -69,11 +70,12 @@ oficinaBtn: "Abrir en Google Maps",
         horarios: "Opening Hours",
         costos: "Admission Rates",
         errorCarga: "Failed to load museum information.",
-        oficinaTitulo: "In-Person Information & Assistance",
-oficinaNombre: "Tourist Police Office",
-oficinaDireccion: "25 de Mayo Square #10 (Chuquisaca Gov. Building)",
+// En traducciones.en:
+oficinaTitulo: "In-Person Information & Assistance",
+oficinaNombre: "Tourist Police Main Office",
+oficinaDireccion: "Next to Pachamama Foundation",
 oficinaHorario: "Tourist Support & Information • Sucre, Bolivia",
-oficinaBtn: "Open in Google Maps",
+oficinaBtn: "Open in Google Maps"
     }
 };
 
