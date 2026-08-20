@@ -67,7 +67,7 @@
     "imagen": "./assets/museos/catedral.webp",
     "horarios": [
       { "dias": "Lunes a Viernes", "horas": "09:00 - 12:00 / 15:00 - 18:30" },
-      { "dias": "Sábados", "horas": "15:00 - 18:30" }
+      { "dias": "Sábados", "horas": "09:00 - 12:00 / 15:00 - 18:30" }
     ],
     "costos": [
       { "concepto": "Nacionales", "precio": "20 Bs" },
