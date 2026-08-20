@@ -65,13 +65,14 @@
     "descripcion": "Estructura monumental de arquitectura renacentista y barroca con una rica colección de arte sacro e imaginería religiosa.",
     "imagen": "./assets/museos/catedral.webp",
     "horarios": [
-      { "dias": "Lunes a Viernes", "horas": "10:00 - 12:00 / 15:00 - 17:00" },
-      { "dias": "Sábados", "horas": "10:00 - 12:00" }
+      { "dias": "Lunes a Viernes", "horas": "09:00 - 12:00 / 15:00 - 18:30" },
+      { "dias": "Sábados", "horas": "15:00 - 18:30" }
     ],
     "costos": [
-      { "concepto": "Nacionales", "precio": "15 Bs" },
-      { "concepto": "Extranjeros", "precio": "25 Bs" },
-      { "concepto": "Estudiantes y Niños", "precio": "10 Bs" }
+      { "concepto": "Nacionales", "precio": "20 Bs" },
+      { "concepto": "Extranjeros", "precio": "30 Bs" },
+      { "concepto": "Niños (5 a 12 años)", "precio": "5 Bs" },
+      { "concepto": "Menores de 5 años no pagan", "precio": "" }
     ]
   },
   {
