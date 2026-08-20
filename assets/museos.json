@@ -50,7 +50,8 @@
     "descripcion": "Muestra del arte textil indígena de las culturas Jalq'a y Tarabuco, resaltando sus técnicas ancestrales y la riqueza de sus diseños.",
     "imagen": "./assets/museos/asur.jpg",
     "horarios": [
-      { "dias": "Lunes a Sábados", "horas": "08:30 - 12:00 / 14:30 - 18:00" }
+      { "dias": "Lunes a Viernes", "horas": "09:00 - 12:15 / 14:30 - 18:00" },
+      { "dias": "Sábados", "horas": "09:00 - 12:00  / 14:30 - 18:00" }
     ],
     "costos": [
       { "concepto": "Nacionales", "precio": "15 Bs" },
@@ -110,12 +111,12 @@
     "descripcion": "El histórico convento posee valiosas muestras de arte colonial y reliquias de las monjas Clarisas, así como un tranquilo patio colonial.",
     "imagen": "./assets/museos/santa-clara.webp",
     "horarios": [
-      { "dias": "Lunes a Viernes", "horas": "09:00 - 12:00 / 14:30 - 17:30" }
+      { "dias": "Lunes a Sábados", "horas": "10:00 - 12:30 / 16:00 - 17:30" }
     ],
     "costos": [
-      { "concepto": "Nacionales", "precio": "15 Bs" },
-      { "concepto": "Extranjeros", "precio": "30 Bs" },
-      { "concepto": "Estudiantes / Cúpula", "precio": "10 Bs" }
+      { "concepto": "Nacionales", "precio": "20 Bs" },
+      { "concepto": "Extranjeros", "precio": "25 Bs" },
+      { "concepto": "Niños (Menores a 11 años)", "precio": "5 Bs" }
     ]
   },
   {
@@ -192,9 +193,10 @@
       { "dias": "Sábados", "horas": "09:00 - 12:00" }
     ],
     "costos": [
-      { "concepto": "Nacionales", "precio": "15 Bs" },
-      { "concepto": "Extranjeros", "precio": "30 Bs" },
-      { "concepto": "Estudiantes", "precio": "10 Bs" }
+      { "concepto": "Nacionales", "precio": "20 Bs" },
+      { "concepto": "Extranjeros", "precio": "45 Bs" },
+      { "concepto": "Estudiantes", "precio": "2 Bs" },
+      { "concepto": "Estudiantes Universitarios", "precio": "Gratis" }
     ]
   },
   {
@@ -237,11 +239,11 @@
     "imagen": "./assets/museos/comunicacion-subterraneos.webp",
     "horarios": [
       { "dias": "Lunes a Viernes", "horas": "09:00 - 12:30 / 14:30 - 18:30" },
-      { "dias": "Sábados", "horas": "09:20 - 12:30" }
+      { "dias": "Sábados", "horas": "09:20 - 12:00" }
     ],
     "costos": [
-      { "concepto": "Nacionales", "precio": "30 Bs" },
-      { "concepto": "Extranjeros", "precio": "70 Bs" },
+      { "concepto": "Nacionales", "precio": "15 Bs" },
+      { "concepto": "Extranjeros", "precio": "40 Bs" },
       { "concepto": "Niños (12 a 18 años)", "precio": "15 Bs" },
       { "concepto": "Menores de 12 años", "precio": "Gratis" }
     ]
